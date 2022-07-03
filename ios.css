@@ -4,10 +4,24 @@ fieldset>a>div>div>select {
     -moz-appearance: none;
     -webkit-appearance: none
 }
-.class {
+.titlebar {
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    background: url("bar.png");
+    background-size: contain;
+    height: 30px;
+    color: white;
     position: fixed;
-    size: 100%, 88px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
 }
+
 fieldset>div,
 panel>block,
 fieldset>a>div>div>label.detail {
