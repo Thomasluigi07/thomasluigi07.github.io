@@ -4,7 +4,10 @@ fieldset>a>div>div>select {
     -moz-appearance: none;
     -webkit-appearance: none
 }
-
+.class {
+    position: fixed;
+    size: 100%, 88px;
+}
 fieldset>div,
 panel>block,
 fieldset>a>div>div>label.detail {
