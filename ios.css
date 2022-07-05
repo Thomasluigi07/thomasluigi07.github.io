@@ -15,6 +15,7 @@ fieldset>a>div>div>select {
     position: fixed;
     font-weight: bold;
     display: flex;
+    z-index: 1337;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
