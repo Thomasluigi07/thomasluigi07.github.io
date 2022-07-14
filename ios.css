@@ -4,6 +4,9 @@ fieldset>a>div>div>select {
     -moz-appearance: none;
     -webkit-appearance: none
 }
+panel {
+    cursor: pointer;
+}
 .titlebar {
     left: 0px;
     top: 0px;
