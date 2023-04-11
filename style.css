@@ -1,3 +1,50 @@
+*{
+    font-family: "Lucida Grande", "Helvetica", "Arial", sans-serif;
+    color: #b9b9b9;
+    text-align: center;
+}
+
+html, body {
+    margin: 0px;
+    background-color: black;
+    background-image: url(NSTexturedFullScreenBackgroundColor.png);
+}
+
+.navbar {
+    background: linear-gradient(#2394de 0%,#274c7e 100%);
+    position: fixed;
+    top: 0px;
+    height: 30px;
+    box-shadow: black 0px 1px 16px 0px;
+    width: 100%;
+}
+
+.navbar p {
+    width: 100%;
+    color: white;
+    /* margin-top: auto; */
+    /* margin-bottom: auto; */
+    margin-block-start: 5px;
+    height: 20px;
+}
+
+.content {
+    margin-top: 50px;
+    margin-left: auto;
+    width: fit-content;
+    margin-right: auto;
+    background: rgba(0, 0, 0, 0.3);
+    border: solid 3px black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+h1, p {
+    margin: 0px;
+}
+
+/* old website code */
+
 panel>input[type="submit"],
 fieldset>a>div>div>input[type="checkbox"],
 fieldset>a>div>div>select {
@@ -38,7 +85,7 @@ fieldset>a>div>div>label.detail {
 
 fieldset>a[href] {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-tap-highlight-color: transparent
+    -webkit-tap-highlight-color: transparent;
 }
 
 * {
@@ -48,16 +95,16 @@ fieldset>a[href] {
     -ms-border-radius: 0;
     -o-border-radius: 0;
     border-radius: 0;
-    color: inherit;
-    font-family: inherit;
-    font-size: inherit;
-    font-style: inherit;
-    font-weight: inherit;
+    /* color: inherit; */
+    /* font-family: inherit; */
+    /* font-size: inherit; */
+    /* font-style: inherit; */
+    /* font-weight: inherit; */
     margin: 0;
     outline: 0;
     padding: 0;
     text-decoration: none;
-    vertical-align: baseline
+    vertical-align: baseline;
 }
 
 .clearfix:after,
@@ -79,7 +126,7 @@ fieldset>a>div>div {
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 img {
@@ -117,12 +164,12 @@ pre {
 }
 
 body {
-    font-family: Helvetica, Arial;
-    -webkit-text-size-adjust: none;
+    /* font-family: Helvetica, Arial; */
+    /* -webkit-text-size-adjust: none; */
     -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    width: 320px;
-    margin: 0 auto
+    /* -webkit-user-select: none; */
+    /* width: 320px; */
+    /* margin: 0 auto; */
 }
 
 body.white {
@@ -277,7 +324,8 @@ fieldset>a,
 fieldset>div,
 fieldset>textarea {
     display: block;
-    position: relative
+    position: relative;
+    margin-bottom: 10px;
 }
 
 panel>fieldset>a,
@@ -464,7 +512,7 @@ panel>fieldset>a:last-child>span.badge {
 }
 
 fieldset {
-    clear: both
+    clear: both;
 }
 
 fieldset.more {
@@ -495,7 +543,7 @@ fieldset>a>img.icon+div>div {
 }
 
 fieldset>a>div {
-    margin-left: 14px
+    /* margin-left: 14px; */
 }
 
 fieldset>a>div>div {
@@ -616,7 +664,10 @@ div.cy-table>fieldset.half>a {
 }
 
 fieldset>a[href]>div {
-    padding-right: 14px
+    padding-right: 14px;
+    background: linear-gradient(0deg, rgba(22, 22, 22,0.3), rgb(164 164 164 / 30%));
+    border: solid black 1px;
+    border-radius: 10px;
 }
 
 fieldset>a>div>div>select,
@@ -626,14 +677,17 @@ fieldset>a[href]>div>div {
     background-repeat: no-repeat;
     padding-right: 24px;
     -webkit-background-size: 10px 13px;
-    background-size: 10px 13px
+    background-size: 10px 13px;
+    filter: invert(1);
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2) {
 
     fieldset>a>div>div>select,
     fieldset>a[href]>div>div {
-        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAAn0lEQVRIx73VUQqAIBAEUCm6WWIQ/hZBh+nmtkGGyKKzuiTMj8FD1sFMCMHkoTVTVu5bLRxmKdcbMVrCmtAUcwwmRiM2Uc4CCKPpCVXQfIbdKHfLXSi/CaKUAQIF6EYZIbAVrdcAQ/eIYmUVoJrgAYESTOtSvvn9VxsQ81CxUUzzcfDFuWti0ge2iuUnXHoxboauB0N+oyKs1EPbgj25AROsvvXJNxxhAAAAAElFTkSuQmCC')
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAAn0lEQVRIx73VUQqAIBAEUCm6WWIQ/hZBh+nmtkGGyKKzuiTMj8FD1sFMCMHkoTVTVu5bLRxmKdcbMVrCmtAUcwwmRiM2Uc4CCKPpCVXQfIbdKHfLXSi/CaKUAQIF6EYZIbAVrdcAQ/eIYmUVoJrgAYESTOtSvvn9VxsQ81CxUUzzcfDFuWti0ge2iuUnXHoxboauB0N+oyKs1EPbgj25AROsvvXJNxxhAAAAAElFTkSuQmCC');
+        text-align: left;
+        padding-left: 10px;
     }
 }
 
@@ -771,5 +825,6 @@ fieldset>div>p {
 fieldset>a>div>div>label:first-child,
 fieldset>a>div>div>label.lower,
 fieldset>a>div>div>label.url {
-    left: -0.0625em
+    left: -0.0625em;
+    filter: invert(1);
 }
