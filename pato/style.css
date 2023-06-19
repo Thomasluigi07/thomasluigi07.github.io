@@ -1,0 +1,23 @@
+/* * is a special css element that effects everything */
+
+* {
+    font-family: "Lucida Grande", "Helvetica", "Arial", sans-serif; /* This sets the font family. Since it is inside a *, it does it for every element */
+}
+
+/* things without . do not affect classes, they affect html tags such as <html>, <body> */
+
+html, body {
+    margin: 0px; /* Margin is the area outside of the box that is padded */
+}
+
+body {
+    background-color: rgb(0, 0, 0);  /* Background-Color sets the background color of an element */
+}
+
+/* things with . affect classes. they affect html tags that have class="" inside of them, like this: <body class="namehere"> */
+
+.content {
+    margin: 8px; /* Margin is the area outside of the box that is padded */
+    margin-top: 50px;
+    text-align: center;
+}
