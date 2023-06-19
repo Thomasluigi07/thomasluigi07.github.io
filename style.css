@@ -836,6 +836,6 @@ fieldset>a>div>div>label.url {
     filter: invert(1);
 }
 
-a {
+.content h1 a {
     color: #b9b9b9 !important;
 }
