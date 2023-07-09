@@ -13,6 +13,13 @@ html {
     background-color: black;
 }
 
+@font-face {
+  font-family: 'Lucida Grande';
+  font-style: normal;
+  font-weight: normal;
+  src: url('LucidaGrande.ttf');
+}
+
 .navbar {
     background-color: #2074e3;
     background: -webkit-linear-gradient(top, #2394de 0%, #274c7e 100%);
