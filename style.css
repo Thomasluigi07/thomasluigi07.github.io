@@ -855,10 +855,59 @@ fieldset>div>p {
 fieldset>a>div>div>label:first-child,
 fieldset>a>div>div>label.lower,
 fieldset>a>div>div>label.url {
-    left: -0.0625em;
     filter: invert(1);
 }
 
 .content h1 a {
     color: #b9b9b9 !important;
+}
+
+.left {
+    width: 60%;
+}
+    
+.right {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 40%;
+}
+
+.right img {
+ float: left;
+ width: 80%;
+ margin-left: 10%;
+ margin-bottom: 10%;
+}
+
+fieldset>a>div>div>select, fieldset>a[href]>div>div {
+    text-align: left;
+}
+
+fieldset>a>div>div>label:first-child, fieldset>a>div>div>label.lower, fieldset>a>div>div>label.url {
+    padding-left: 1%;
+}
+
+
+.review {
+    padding: 10px;
+    border: #000 solid 3px;
+    border-radius: 5px;
+    background: rgba(45, 45, 45,0.7);
+    margin-bottom: 15px;
+}
+
+special {
+    font-family: Helvetica, Tahoma, Arial, sans-serif;
+}
+
+.left, .right {
+    display: table-cell;
+}
+
+.left p, .left h3, .left h4, .left h5 {
+    text-align: left;
+}
+
+.left h4 {
+    margin-bottom: 10px;
 }
