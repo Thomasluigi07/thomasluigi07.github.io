@@ -53,19 +53,19 @@ function soundStyleManager(mode,style) {
     } else if (mode == "load") {
         var soundStyle = localStorage.getItem("soundStyle");
         if (document.getElementById("load") !== null) {
-            document.getElementById("load").setAttribute("src","./sound/" + soundStyle + "/load.wav");
+            document.getElementById("load").setAttribute("src","/sound/" + soundStyle + "/load.wav");
         }
         if (document.getElementById("select") !== null) {
-            document.getElementById("select").setAttribute("src","./sound/" + soundStyle + "/select.wav");
+            document.getElementById("select").setAttribute("src","/sound/" + soundStyle + "/select.wav");
         }
         if (document.getElementById("back") !== null) {
-            document.getElementById("back").setAttribute("src","./sound/" + soundStyle + "/back.wav");
+            document.getElementById("back").setAttribute("src","/sound/" + soundStyle + "/back.wav");
         }
         if (document.getElementById("invalid") !== null) {
-            document.getElementById("invalid").setAttribute("src","./sound/" + soundStyle + "/invalid.wav");
+            document.getElementById("invalid").setAttribute("src","/sound/" + soundStyle + "/invalid.wav");
         }
         if (document.getElementById("leavesite") !== null) {
-            document.getElementById("leavesite").setAttribute("src","./sound/" + soundStyle + "/leavesite.wav");
+            document.getElementById("leavesite").setAttribute("src","/sound/" + soundStyle + "/leavesite.wav");
         }
     } else {
         console.warn("Invalid mode!");
