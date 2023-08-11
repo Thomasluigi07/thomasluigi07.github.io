@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+  <title>Thomas - Sound Settings</title>
+  <link rel="stylesheet" href="/style.css">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <meta content="Thomas' Webpage" property="og:title">
+  <meta content="this is my webpage" property="og:description">
+  <meta content="https://thomasluigi07.com/settings" property="og:url">
+  <meta content="/iPhoneWebApp/icon.png" property="og:image">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <link rel="apple-touch-icon" href="/iPhoneWebApp/icon.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/iPhoneWebApp/icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/iPhoneWebApp/icon.png">
+  <link rel="apple-touch-startup-image" href="/iPhoneWebApp/splash.png" />
+  <link rel="manifest" href="/manifest.json">
+  <script src="/js/sound.js"></script>
+  <meta content="#2394de" data-react-helmet="true" name="theme-color">
+</head>
+
+<body>
+  <audio id="load"><source src="" type="audio/wav"></audio>
+  <audio id="select"><source src="" type="audio/wav"></audio>
+  <audio id="back"><source src="" type="audio/wav"></audio>
+  <audio id="invalid"><source src="" type="audio/wav"></audio>
+  <audio id="leavesite"><source src="" type="audio/wav"></audio>
+  <div class="navbar">
+    <p>Sound</p>
+  </div>
+  <div class="content">
+    <h1>Sound Settings</h1>
+    <br />
+    <p>Change sound related settings.</p>
+    <br />
+    <br />
+    <label for="soundEnabled">Sound:  </label>
+    <select name="soundEnabled" id="soundEnabled">
+      <option id="v1" value="true">Enabled</option>
+      <option id="v2" value="false">Disabled</option>
+    </select>
+    <script>
+      if (localStorage.getItem('soundEnabled') == "true") {
+        document.getElementById("v1").setAttribute("selected","")
+      } else {
+        document.getElementById("v2").setAttribute("selected","")
+      }
+    </script>
+    <br />
+    <br />
+    <label for="soundStyle">Sound Style:</label>
+    <select name="soundStyle" id="soundStyle">
+      <option id="v3" value="HL1">Half Life 1</option>
+      <option id="v4" value="XBOX360">Xbox 360 (Blades)</option>
+      <option id="v5" value="XBOX360NXE">Xbox 360 (NXE)</option>
+      <option id="v6" value="XBOX">Original XBOX</option>
+      <option id="v7" value="GAMECUBE">GameCube</option>
+    </select>
+    <script>
+      if (localStorage.getItem('soundStyle') == "HL1") {
+        document.getElementById("v3").setAttribute("selected","")
+      } else if (localStorage.getItem('soundStyle') == "XBOX360") {
+        document.getElementById("v4").setAttribute("selected","")
+      } else if (localStorage.getItem('soundStyle') == "XBOX360NXE") {
+        document.getElementById("v5").setAttribute("selected","")
+      } else if (localStorage.getItem('soundStyle') == "XBOX") {
+        document.getElementById("v6").setAttribute("selected","")
+      } else if (localStorage.getItem('soundStyle') == "GAMECUBE") {
+        document.getElementById("v7").setAttribute("selected","")
+      } else {
+        document.getElementById("v3").setAttribute("selected","")
+      }
+    </script>
+    <br />
+    <br />
+    <fieldset>
+      <a href="#" onclick="setSoundEnabled(document.getElementById('soundEnabled').selectedIndex); soundStyleManager('set',document.getElementById('soundStyle').selectedIndex); soundStyleManager('load');">
+        <div>
+          <div>
+            <label>Save Changes<br></label>
+          </div>
+        </div>
+      </a>
+      <a onclick="playSound('select');" href="#">
+        <div>
+          <div>
+            <label>Test Sounds<br></label>
+          </div>
+        </div>
+      </a>
+      <a onclick="playSound('back')" href="../index.html">
+        <div>
+          <div>
+            <label>Go Back<br></label>
+          </div>
+        </div>
+      </a>
+    </fieldset>
+  </div>
+</body>
+
+</html>

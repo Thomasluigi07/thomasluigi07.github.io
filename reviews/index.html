@@ -1,26 +1,34 @@
+<!DOCTYPE HTML>
+
 <html lang="en">
 
 <head>
   <title>Thomas - Reviews & Opinions</title>
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="/style.css">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <meta content="Reviews & Opinions" property="og:title">
   <meta content="Here are my opinions on video games i've played that can also count as reviews." property="og:description">
   <meta content="https://thomasluigi07.com/reviews" property="og:url">
   <meta content="../iPhoneWebApp/icon.png" property="og:image">
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <link rel="apple-touch-icon" href="../iPhoneWebApp/icon.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="../iPhoneWebApp/icon.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="../iPhoneWebApp/icon.png">
-  <link rel="apple-touch-startup-image" href="../iPhoneWebApp/splash.png" />
-  <link rel="manifest" href="../manifest.json">
+  <link rel="apple-touch-icon" href="/iPhoneWebApp/icon.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/iPhoneWebApp/icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/iPhoneWebApp/icon.png">
+  <link rel="apple-touch-startup-image" href="/iPhoneWebApp/splash.png" />
+  <link rel="manifest" href="/manifest.json">
+  <script src="/js/sound.js"></script>
   <meta content="#2394de" data-react-helmet="true" name="theme-color">
 </head>
 
 <body>
+    <audio id="load"><source src="" type="audio/wav"></audio>
+    <audio id="select"><source src="" type="audio/wav"></audio>
+    <audio id="back"><source src="" type="audio/wav"></audio>
+    <audio id="invalid"><source src="" type="audio/wav"></audio>
+    <audio id="leavesite"><source src="" type="audio/wav"></audio>  
   <div class="navbar">
     <p>Reviews & Opinions</p>
   </div>
@@ -166,7 +174,7 @@
     </div>
     <br />
     <fieldset>
-      <a href="../index.html">
+      <a onclick="playSound('back')" href="../index.html">
         <div>
           <div>
             <label>Back<br></label>
