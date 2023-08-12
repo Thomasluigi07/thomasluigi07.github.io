@@ -58,6 +58,9 @@
       <option id="v5" value="XBOX360NXE">Xbox 360 (NXE)</option>
       <option id="v6" value="XBOX">Original XBOX</option>
       <option id="v7" value="GAMECUBE">GameCube</option>
+      <option id="v8" value="PS2">Playstation 2</option>
+      <option id="v9" value="WIIU">Wii U</option>
+      <option id="v10" value="WIIU">KLONOA</option>
     </select>
     <script>
       if (localStorage.getItem('soundStyle') == "HL1") {
@@ -70,6 +73,12 @@
         document.getElementById("v6").setAttribute("selected","")
       } else if (localStorage.getItem('soundStyle') == "GAMECUBE") {
         document.getElementById("v7").setAttribute("selected","")
+      } else if (localStorage.getItem('soundStyle') == "PS2") {
+        document.getElementById("v8").setAttribute("selected","")
+      } else if (localStorage.getItem('soundStyle') == "WIIU") {
+        document.getElementById("v9").setAttribute("selected","")
+      } else if (localStorage.getItem('soundStyle') == "KLONOA") {
+        document.getElementById("v10").setAttribute("selected","")
       } else {
         document.getElementById("v3").setAttribute("selected","")
       }

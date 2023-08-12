@@ -1,25 +1,27 @@
 // sound manager
 
-if (localStorage.getItem('soundEnabled') == null && localStorage.getItem('soundStyle') == null && localStorage.getItem('musicEnabled') == null) {
+// init LocalStorage for settings
+if (localStorage.getItem('soundEnabled') == null) {
     localStorage.setItem('soundEnabled', "true");
+}
+if (localStorage.getItem('soundStyle') == null) {
     localStorage.setItem('soundStyle', "HL1");
+}
+if (localStorage.getItem('musicEnabled') == null) {
     localStorage.setItem('musicEnabled', "false");
 }
 
+// play sound from audio id
 function playSound(audioId, secondAudioId) {
     if (localStorage.getItem('soundEnabled') == "true") {
         if (audioId !== null) {
             if (document.getElementById(audioId) !== null) {
-                document.getElementById(audioId).currentTime = 0;
-                document.getElementById(audioId).load();
                 document.getElementById(audioId).play();
             } else {
                 console.warn("Could not find audioId " + audioId + "!");
             }
             if (secondAudioId !== null) {
                 if (document.getElementById(secondAudioId) !== null) {
-                    document.getElementById(secondAudioId).currentTime = 0;
-                    document.getElementById(secondAudioId).load();
                     document.getElementById(secondAudioId).play();
                 } else {
                     if (secondAudioId !== undefined) {
@@ -35,7 +37,8 @@ function playSound(audioId, secondAudioId) {
     }
 }
 
-function soundStyleManager(mode,style) {
+// set/reload sound style
+function soundStyleManager(mode, style) {
     if (mode == "set") {
         if (style == 0) {
             localStorage.setItem('soundStyle', "HL1");
@@ -47,31 +50,43 @@ function soundStyleManager(mode,style) {
             localStorage.setItem('soundStyle', "XBOX");
         } else if (style == 4) {
             localStorage.setItem('soundStyle', "GAMECUBE");
+        } else if (style == 5) {
+            localStorage.setItem('soundStyle', "PS2");
+        } else if (style == 6) {
+            localStorage.setItem('soundStyle', "WIIU");
+        } else if (style == 7) {
+            localStorage.setItem('soundStyle', "KLONOA");
         } else {
             console.warn("Invalid Style!");
         }
     } else if (mode == "load") {
         var soundStyle = localStorage.getItem("soundStyle");
         if (document.getElementById("load") !== null) {
-            document.getElementById("load").setAttribute("src","/sound/" + soundStyle + "/load.wav");
+            document.getElementById("load").setAttribute("src", "/sound/" + soundStyle + "/load.wav");
+            document.getElementById("load").preload = 'auto';
         }
         if (document.getElementById("select") !== null) {
-            document.getElementById("select").setAttribute("src","/sound/" + soundStyle + "/select.wav");
+            document.getElementById("select").setAttribute("src", "/sound/" + soundStyle + "/select.wav");
+            document.getElementById("load").preload = 'auto';
         }
         if (document.getElementById("back") !== null) {
-            document.getElementById("back").setAttribute("src","/sound/" + soundStyle + "/back.wav");
+            document.getElementById("back").setAttribute("src", "/sound/" + soundStyle + "/back.wav");
+            document.getElementById("load").preload = 'auto';
         }
         if (document.getElementById("invalid") !== null) {
-            document.getElementById("invalid").setAttribute("src","/sound/" + soundStyle + "/invalid.wav");
+            document.getElementById("invalid").setAttribute("src", "/sound/" + soundStyle + "/invalid.wav");
+            document.getElementById("load").preload = 'auto';
         }
         if (document.getElementById("leavesite") !== null) {
-            document.getElementById("leavesite").setAttribute("src","/sound/" + soundStyle + "/leavesite.wav");
+            document.getElementById("leavesite").setAttribute("src", "/sound/" + soundStyle + "/leavesite.wav");
+            document.getElementById("load").preload = 'auto';
         }
     } else {
         console.warn("Invalid mode!");
     }
 }
 
+// set sound enabled
 function setSoundEnabled(enabled) {
     if (enabled == 0) {
         localStorage.setItem("soundEnabled", "true")
@@ -82,7 +97,7 @@ function setSoundEnabled(enabled) {
     }
 }
 
-
+// if this runs it works!!! :)
 window.addEventListener('load', function () {
     soundStyleManager("load");
     playSound("load");
