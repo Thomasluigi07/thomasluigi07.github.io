@@ -61,6 +61,7 @@
       <option id="v8" value="PS2">Playstation 2</option>
       <option id="v9" value="WIIU">Wii U</option>
       <option id="v10" value="WIIU">KLONOA</option>
+      <option id="v11" value="WIIU">Mario Kart Wii</option>
     </select>
     <script>
       if (localStorage.getItem('soundStyle') == "HL1") {
@@ -79,6 +80,8 @@
         document.getElementById("v9").setAttribute("selected","")
       } else if (localStorage.getItem('soundStyle') == "KLONOA") {
         document.getElementById("v10").setAttribute("selected","")
+      } else if (localStorage.getItem('soundStyle') == "MKWII") {
+        document.getElementById("v11").setAttribute("selected","")
       } else {
         document.getElementById("v3").setAttribute("selected","")
       }
@@ -96,6 +99,12 @@
       <p>If sounds don't play,</p>
       <p>try enabling sound autoplay</p>
       <p>for this site.</p>
+      <br />
+      <br />
+      <p>Or it may be your</p>
+      <p>browser causing the</p>
+      <p>audio to not play.</p>
+      <br />
       <a onclick="playSound('select');" href="#">
         <div>
           <div>

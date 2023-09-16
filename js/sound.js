@@ -56,6 +56,8 @@ function soundStyleManager(mode, style) {
             localStorage.setItem('soundStyle', "WIIU");
         } else if (style == 7) {
             localStorage.setItem('soundStyle', "KLONOA");
+        } else if (style == 8) {
+            localStorage.setItem('soundStyle', "MKWII");
         } else {
             console.warn("Invalid Style!");
         }
