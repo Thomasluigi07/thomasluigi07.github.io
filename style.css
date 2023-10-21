@@ -67,7 +67,7 @@ html {
 .content {  
     margin-top: 50px;
     margin-left: auto;
-    max-width: 500px;
+    max-width: 550px;
     width: fit-content;
     margin-right: auto;
     background: rgba(0, 0, 0, 0.3);
@@ -889,11 +889,15 @@ fieldset>a>div>div>label.url {
     width: 40%;
 }
 
-.right img {
+.right img, .right video {
  float: left;
  width: 80%;
  margin-left: 10%;
  margin-bottom: 10%;
+}
+
+.right p {
+    height: 1px;
 }
 
 fieldset>a>div>div>select, fieldset>a[href]>div>div {
