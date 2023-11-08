@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+  <title>Thomas - Guestbook</title>
+  <link rel="stylesheet" href="/style.css">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <meta content="Guestbook" property="og:title">
+  <meta content="Leave a message here! Thats crazy!!!" property="og:description">
+  <meta content="https://thomasluigi07.com/guestbook" property="og:url">
+  <meta content="/iPhoneWebApp/icon.png" property="og:image">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <link rel="apple-touch-icon" href="/iPhoneWebApp/icon.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/iPhoneWebApp/icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/iPhoneWebApp/icon.png">
+  <link rel="apple-touch-startup-image" href="/iPhoneWebApp/splash.png" />
+  <link rel="manifest" href="/manifest.json">
+  <script src="/js/sound.js"></script>
+  <meta content="#2394de" data-react-helmet="true" name="theme-color">
+</head>
+
+<body>
+  <audio id="load"><source src="" type="audio/wav"></audio>
+  <audio id="select"><source src="" type="audio/wav"></audio>
+  <audio id="back"><source src="" type="audio/wav"></audio>
+  <audio id="invalid"><source src="" type="audio/wav"></audio>
+  <audio id="leavesite"><source src="" type="audio/wav"></audio>
+  <div class="navbar">
+    <p>Guestbook</p>
+  </div>
+  <div class="content">
+    <h1>Guestbook</h1>
+    <br />
+    <p>Leave a message on this webiste! Woah!</p>
+    <br />
+    <br />
+    <div class="reviews">
+      <div class="review">
+          <iframe width="490px" height="700px" src="https://thomasluigi07.123guestbook.com/">
+            <a href="https://thomasluigi07.123guestbook.com">Your browser does not support iframes. Please click here for the guestbook.</a>
+          </iframe>
+      </div>
+    <br />
+    <fieldset>
+      <a onclick="playSound('back')" href="/index.html">
+        <div>
+          <div>
+            <label>Back<br></label>
+          </div>
+        </div>
+      </a>
+    </fieldset>
+  </div>
+</body>
+
+</html>
