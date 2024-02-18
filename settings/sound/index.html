@@ -62,6 +62,7 @@
       <option id="v9" value="WIIU">Wii U</option>
       <option id="v10" value="KLONOA">KLONOA</option>
       <option id="v11" value="MKWII">Mario Kart Wii</option>
+      <option id="v12" value="XBOXONE">XBOX ONE</option>
     </select>
     <script>
       if (localStorage.getItem('soundStyle') == "HL1") {
@@ -82,6 +83,8 @@
         document.getElementById("v10").setAttribute("selected","")
       } else if (localStorage.getItem('soundStyle') == "MKWII") {
         document.getElementById("v11").setAttribute("selected","")
+      } else if (localStorage.getItem('soundStyle') == "MKWII") {
+        document.getElementById("v12").setAttribute("selected","")
       } else {
         document.getElementById("v3").setAttribute("selected","")
       }
@@ -105,13 +108,50 @@
       <p>browser causing the</p>
       <p>audio to not play.</p>
       <br />
-      <a onclick="playSound('select');" href="#">
+      <br />
+      <p>Sound Test</p>
+      <p>Click on the buttons</p>
+      <p>below to test a sound.</p>
+      <p>Make sure to save your</p>
+      <p>sound settings if you've</p>
+      <p>changed your sound style.</p>
+      <a onclick="playSound('load');" href="#">
         <div>
           <div>
-            <label>Test Sounds<br></label>
+            <label>Page load sound<br></label>
           </div>
         </div>
       </a>
+      <a onclick="playSound('select');" href="#">
+        <div>
+          <div>
+            <label>Select sound<br></label>
+          </div>
+        </div>
+      </a>
+      <a onclick="playSound('back');" href="#">
+        <div>
+          <div>
+            <label>Back sound<br></label>
+          </div>
+        </div>
+      </a>
+      <a onclick="playSound('invalid');" href="#">
+        <div>
+          <div>
+            <label>Invalid sound<br></label>
+          </div>
+        </div>
+      </a>
+      <a onclick="playSound('leavesite');" href="#">
+        <div>
+          <div>
+            <label>Leaving site sound<br></label>
+          </div>
+        </div>
+      </a>
+      <br />
+      <br />
       <a onclick="playSound('back')" href="../index.html">
         <div>
           <div>
