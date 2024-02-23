@@ -60,6 +60,8 @@ function soundStyleManager(mode, style) {
             localStorage.setItem('soundStyle', "MKWII");
         } else if (style == 9) {
             localStorage.setItem('soundStyle', "XBOXONE");
+        } else if (style == 10) {
+            localStorage.setItem('soundStyle', "KLONOA2");
         } else {
             console.warn("Invalid Style!");
         }
