@@ -64,6 +64,7 @@
       <option id="v11" value="MKWII">Mario Kart Wii</option>
       <option id="v12" value="XBOXONE">Xbox One</option>
       <option id="v13" value="KLONOA2">Klonoa 2</option>
+      <option id="v14" value="THOMAS">Thomas (LOUD)</option>
     </select>
     <script>
       if (localStorage.getItem('soundStyle') == "HL1") {
@@ -88,6 +89,8 @@
         document.getElementById("v12").setAttribute("selected","")
       } else if (localStorage.getItem('soundStyle') == "KLONOA2") {
         document.getElementById("v13").setAttribute("selected","")
+      }else if (localStorage.getItem('soundStyle') == "THOMAS") {
+        document.getElementById("v14").setAttribute("selected","")
       } else {
         document.getElementById("v3").setAttribute("selected","")
       }

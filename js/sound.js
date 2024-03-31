@@ -62,6 +62,8 @@ function soundStyleManager(mode, style) {
             localStorage.setItem('soundStyle', "XBOXONE");
         } else if (style == 10) {
             localStorage.setItem('soundStyle', "KLONOA2");
+        } else if (style == 11) {
+            localStorage.setItem('soundStyle', "THOMAS");
         } else {
             console.warn("Invalid Style!");
         }
