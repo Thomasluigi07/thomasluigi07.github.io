@@ -64,6 +64,8 @@ function soundStyleManager(mode, style) {
             localStorage.setItem('soundStyle', "KLONOA2");
         } else if (style == 11) {
             localStorage.setItem('soundStyle', "THOMAS");
+        } else if (style == 12) {
+            localStorage.setItem('soundStyle', "PUYO");
         } else {
             console.warn("Invalid Style!");
         }
