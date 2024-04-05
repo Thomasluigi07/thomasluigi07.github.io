@@ -1,22 +1,31 @@
-*{
+* {
     font-family: "Lucida Grande", "Helvetica", "Arial", sans-serif;
     color: #b9b9b9;
     text-align: center;
     cursor: url(http://thomasluigi07.com/NormalSelect.cur), default;
 }
 
-a img, a p, a, fieldset>a>div>div>select, fieldset>a[href]>div>div, fieldset>a[href]>div, fieldset>a>div>div>label:first-child, fieldset>a>div>div>label.lower, fieldset>a>div>div>label.url {
+a img,
+a p,
+a,
+fieldset>a>div>div>select,
+fieldset>a[href]>div>div,
+fieldset>a[href]>div,
+fieldset>a>div>div>label:first-child,
+fieldset>a>div>div>label.lower,
+fieldset>a>div>div>label.url {
     cursor: url(http://thomasluigi07.com/LinkSelect.cur), pointer;
 }
- 
- input, textarea {
-    cursor: url(http://thomasluigi07.com/TextSelect.cur), text;
- }
- 
- * {
- }
 
-html, body {
+input,
+textarea {
+    cursor: url(http://thomasluigi07.com/TextSelect.cur), text;
+}
+
+* {}
+
+html,
+body {
     margin: 0px;
 }
 
@@ -26,17 +35,17 @@ html {
 }
 
 @font-face {
-  font-family: 'Lucida Grande';
-  font-style: normal;
-  font-weight: normal;
-  src: url('LucidaGrande.ttf');
+    font-family: 'Lucida Grande';
+    font-style: normal;
+    font-weight: normal;
+    src: url('LucidaGrande.ttf');
 }
 
 .navbar {
     background-color: #2074e3;
     background: -webkit-linear-gradient(top, #2394de 0%, #274c7e 100%);
     background: -ms-linear-gradient(top, #2394de 0%, #274c7e 100%);
-    background: linear-gradient(#2394de 0%,#274c7e 100%);
+    background: linear-gradient(#2394de 0%, #274c7e 100%);
     position: fixed;
     top: 0px;
     z-index: 100;
@@ -64,7 +73,7 @@ html {
     }
 }
 
-.content {  
+.content {
     margin-top: 50px;
     margin-left: auto;
     max-width: 550px;
@@ -74,17 +83,19 @@ html {
     border: solid 3px black;
     border-radius: 5px;
     padding: 10px;
-    margin-bottom: 100px;;
+    margin-bottom: 100px;
+    ;
     animation: tweenIn_content;
     animation-duration: 0.7s;
     animation-iteration-count: 1;
     animation-timing-function: cubic-bezier(0.18,
-    0.89,
-    0.32,
-    1.28);
+            0.89,
+            0.32,
+            1.28);
 }
 
-h1, p {
+h1,
+p {
     margin: 0px;
 }
 
@@ -96,9 +107,11 @@ fieldset>a>div>div>select {
     -moz-appearance: none;
     -webkit-appearance: none
 }
+
 panel {
     cursor: url(http://thomasluigi07.com/LinkSelect.cur), pointer;
 }
+
 .titlebar {
     left: 0px;
     top: 0px;
@@ -712,7 +725,7 @@ fieldset>a[href]>div {
     padding-right: 14px;
     background: -webkit-linear-gradient(bottom, #161616 0%, #373636 100%);
     background: -ms-linear-gradient(bottom, #161616 0%, #373636 100%);
-    background: linear-gradient(0deg, rgba(22, 22, 22,0.3), rgba(164, 164, 164, 0.3));
+    background: linear-gradient(0deg, rgba(22, 22, 22, 0.3), rgba(164, 164, 164, 0.3));
     border: solid black 1px;
     border-radius: 10px;
 }
@@ -882,33 +895,35 @@ fieldset>a>div>div>label.url {
 .left {
     width: 60%;
 }
-    
+
 .right {
     margin-top: auto;
     margin-bottom: auto;
     width: 40%;
 }
 
-.right img, .right video {
- float: left;
- width: 80%;
- margin-left: 10%;
- margin-bottom: 10%;
+.right img,
+.right video {
+    float: left;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 10%;
 }
 
-.right video {
-    
-}
+.right video {}
 
 .right p {
     height: 1px;
 }
 
-fieldset>a>div>div>select, fieldset>a[href]>div>div {
+fieldset>a>div>div>select,
+fieldset>a[href]>div>div {
     text-align: left;
 }
 
-fieldset>a>div>div>label:first-child, fieldset>a>div>div>label.lower, fieldset>a>div>div>label.url {
+fieldset>a>div>div>label:first-child,
+fieldset>a>div>div>label.lower,
+fieldset>a>div>div>label.url {
     padding-left: 1%;
 }
 
@@ -916,7 +931,7 @@ fieldset>a>div>div>label:first-child, fieldset>a>div>div>label.lower, fieldset>a
     padding: 10px;
     border: #000 solid 3px;
     border-radius: 5px;
-    background: rgba(45, 45, 45,0.7);
+    background: rgba(45, 45, 45, 0.7);
     margin-bottom: 15px;
 }
 
@@ -924,11 +939,15 @@ special {
     font-family: Helvetica, Tahoma, Arial, sans-serif;
 }
 
-.left, .right {
+.left,
+.right {
     display: table-cell;
 }
 
-.left p, .left h3, .left h4, .left h5 {
+.left p,
+.left h3,
+.left h4,
+.left h5 {
     text-align: left;
 }
 
