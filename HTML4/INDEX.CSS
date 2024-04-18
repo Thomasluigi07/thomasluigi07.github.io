@@ -1,0 +1,17 @@
+html {
+    background: url('WAVES.GIF');
+}
+
+* {
+    color: white;
+    font-family: 'Lucida Grande', 'Helvetica', 'Tahoma', Arial, sans-serif;
+    text-align: left;
+}
+
+a {
+    color: #507ddd;
+}
+
+.logo {
+    width: 285px;
+}

@@ -1,0 +1,22 @@
+html {
+    background: url('./SIDEBAR.GIF');
+}
+
+* {
+    color: white;
+    font-family: 'Lucida Grande', 'Helvetica', 'Tahoma', Arial, sans-serif;
+    text-align: center;
+}
+
+a {
+    color: #d6d6d6;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #6a6a6a;
+}
+
+td {
+    text-align: right;
+}
