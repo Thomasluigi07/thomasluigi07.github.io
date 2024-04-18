@@ -13,10 +13,6 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    color: #6a6a6a;
-}
-
 td {
     text-align: right;
 }

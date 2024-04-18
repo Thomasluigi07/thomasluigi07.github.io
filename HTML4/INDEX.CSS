@@ -2,16 +2,35 @@ html {
     background: url('WAVES.GIF');
 }
 
-* {
+p, h1, h3 {
     color: white;
     font-family: 'Lucida Grande', 'Helvetica', 'Tahoma', Arial, sans-serif;
     text-align: left;
 }
 
-a {
-    color: #507ddd;
+tr, td {
+    color: black;
+    font-family: 'Lucida Grande', 'Helvetica', 'Tahoma', Arial, sans-serif;
+    text-align: left;
 }
 
-.logo {
-    width: 285px;
+tr {
+    background: white;
+}
+
+tr img {
+    width: 120px;
+}
+
+th {
+    color: black;
+    font-family: 'Lucida Grande', 'Helvetica', 'Tahoma', Arial, sans-serif;
+    text-align: center;
+}
+
+
+a {
+    color: #507ddd;
+    font-family: 'Lucida Grande', 'Helvetica', 'Tahoma', Arial, sans-serif;
+    text-align: left;
 }
