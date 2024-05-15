@@ -66,6 +66,8 @@ function soundStyleManager(mode, style) {
             localStorage.setItem('soundStyle', "THOMAS");
         } else if (style == 12) {
             localStorage.setItem('soundStyle', "PUYO");
+        } else if (style == 13) {
+            localStorage.setItem('soundStyle', "MARBLEULTRA");
         } else {
             console.warn("Invalid Style!");
         }

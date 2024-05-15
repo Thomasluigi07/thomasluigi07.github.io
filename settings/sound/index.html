@@ -66,6 +66,7 @@
       <option id="v13" value="KLONOA2">Klonoa 2</option>
       <option id="v14" value="THOMAS">2020 Thomas (LOUD)</option>
       <option id="v15" value="PUYO">Puyo Pop Fever</option>
+      <option id="v16" value="MARBLEULTRA">Marble Blast Ultra</option>
     </select>
     <script>
       if (localStorage.getItem('soundStyle') == "HL1") {
@@ -94,6 +95,8 @@
         document.getElementById("v14").setAttribute("selected","")
       } else if (localStorage.getItem('soundStyle') == "PUYO") {
         document.getElementById("v15").setAttribute("selected","")
+      } else if (localStorage.getItem('soundStyle') == "MARBLEULTRA") {
+        document.getElementById("v16").setAttribute("selected","")
       } else {
         document.getElementById("v3").setAttribute("selected","")
       }
