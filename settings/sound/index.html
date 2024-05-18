@@ -67,6 +67,7 @@
       <option id="v14" value="THOMAS">2020 Thomas (LOUD)</option>
       <option id="v15" value="PUYO">Puyo Pop Fever</option>
       <option id="v16" value="MARBLEULTRA">Marble Blast Ultra</option>
+      <option id="v17" value="FE2">Flood Escape 2</option>
     </select>
     <script>
       if (localStorage.getItem('soundStyle') == "HL1") {
@@ -97,6 +98,8 @@
         document.getElementById("v15").setAttribute("selected","")
       } else if (localStorage.getItem('soundStyle') == "MARBLEULTRA") {
         document.getElementById("v16").setAttribute("selected","")
+      } else if (localStorage.getItem('soundStyle') == "FE2") {
+        document.getElementById("v17").setAttribute("selected","")
       } else {
         document.getElementById("v3").setAttribute("selected","")
       }

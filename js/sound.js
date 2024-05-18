@@ -68,6 +68,8 @@ function soundStyleManager(mode, style) {
             localStorage.setItem('soundStyle', "PUYO");
         } else if (style == 13) {
             localStorage.setItem('soundStyle', "MARBLEULTRA");
+        } else if (style == 14) {
+            localStorage.setItem('soundStyle', "FE2");
         } else {
             console.warn("Invalid Style!");
         }
