@@ -1,0 +1,18 @@
+html {
+    background: url('./sidebar.gif');
+}
+
+* {
+    color: white;
+    font-family: 'Lucida Grande', 'Helvetica', 'Tahoma', Arial, sans-serif;
+    text-align: center;
+}
+
+a {
+    color: #d6d6d6;
+    text-decoration: none;
+}
+
+td {
+    text-align: right;
+}
