@@ -1,2 +1,2 @@
-# thomasluigi07.github.io
+# thomasluigi07.com
 my website
