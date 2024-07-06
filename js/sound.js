@@ -42,34 +42,6 @@ function soundStyleManager(mode, style) {
     if (mode == "set") {
         if (style == 0) {
             localStorage.setItem('soundStyle', "HL1");
-        } else if (style == 1) {
-            localStorage.setItem('soundStyle', "XBOX360");
-        } else if (style == 2) {
-            localStorage.setItem('soundStyle', "XBOX360NXE");
-        } else if (style == 3) {
-            localStorage.setItem('soundStyle', "XBOX");
-        } else if (style == 4) {
-            localStorage.setItem('soundStyle', "GAMECUBE");
-        } else if (style == 5) {
-            localStorage.setItem('soundStyle', "PS2");
-        } else if (style == 6) {
-            localStorage.setItem('soundStyle', "WIIU");
-        } else if (style == 7) {
-            localStorage.setItem('soundStyle', "KLONOA");
-        } else if (style == 8) {
-            localStorage.setItem('soundStyle', "MKWII");
-        } else if (style == 9) {
-            localStorage.setItem('soundStyle', "XBOXONE");
-        } else if (style == 10) {
-            localStorage.setItem('soundStyle', "KLONOA2");
-        } else if (style == 11) {
-            localStorage.setItem('soundStyle', "THOMAS");
-        } else if (style == 12) {
-            localStorage.setItem('soundStyle', "PUYO");
-        } else if (style == 13) {
-            localStorage.setItem('soundStyle', "MARBLEULTRA");
-        } else if (style == 14) {
-            localStorage.setItem('soundStyle', "FE2");
         } else {
             console.warn("Invalid Style!");
         }

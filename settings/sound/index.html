@@ -51,63 +51,8 @@
     </script>
     <br />
     <br />
-    <label for="soundStyle">Sound Style:</label>
-    <select name="soundStyle" id="soundStyle">
-      <option id="v3" value="HL1">Half-Life</option>
-      <option id="v4" value="XBOX360">Xbox 360 (Blades)</option>
-      <option id="v5" value="XBOX360NXE">Xbox 360 (NXE)</option>
-      <option id="v6" value="XBOX">Xbox</option>
-      <option id="v7" value="GAMECUBE">GameCube</option>
-      <option id="v8" value="PS2">Playstation 2</option>
-      <option id="v9" value="WIIU">Wii U</option>
-      <option id="v10" value="KLONOA">Klonoa</option>
-      <option id="v11" value="MKWII">Mario Kart Wii</option>
-      <option id="v12" value="XBOXONE">Xbox One</option>
-      <option id="v13" value="KLONOA2">Klonoa 2</option>
-      <option id="v14" value="THOMAS">2020 Thomas (LOUD)</option>
-      <option id="v15" value="PUYO">Puyo Pop Fever</option>
-      <option id="v16" value="MARBLEULTRA">Marble Blast Ultra</option>
-      <option id="v17" value="FE2">Flood Escape 2</option>
-    </select>
-    <script>
-      if (localStorage.getItem('soundStyle') == "HL1") {
-        document.getElementById("v3").setAttribute("selected","")
-      } else if (localStorage.getItem('soundStyle') == "XBOX360") {
-        document.getElementById("v4").setAttribute("selected","")
-      } else if (localStorage.getItem('soundStyle') == "XBOX360NXE") {
-        document.getElementById("v5").setAttribute("selected","")
-      } else if (localStorage.getItem('soundStyle') == "XBOX") {
-        document.getElementById("v6").setAttribute("selected","")
-      } else if (localStorage.getItem('soundStyle') == "GAMECUBE") {
-        document.getElementById("v7").setAttribute("selected","")
-      } else if (localStorage.getItem('soundStyle') == "PS2") {
-        document.getElementById("v8").setAttribute("selected","")
-      } else if (localStorage.getItem('soundStyle') == "WIIU") {
-        document.getElementById("v9").setAttribute("selected","")
-      } else if (localStorage.getItem('soundStyle') == "KLONOA") {
-        document.getElementById("v10").setAttribute("selected","")
-      } else if (localStorage.getItem('soundStyle') == "MKWII") {
-        document.getElementById("v11").setAttribute("selected","")
-      } else if (localStorage.getItem('soundStyle') == "XBOXONE") {
-        document.getElementById("v12").setAttribute("selected","")
-      } else if (localStorage.getItem('soundStyle') == "KLONOA2") {
-        document.getElementById("v13").setAttribute("selected","")
-      } else if (localStorage.getItem('soundStyle') == "THOMAS") {
-        document.getElementById("v14").setAttribute("selected","")
-      } else if (localStorage.getItem('soundStyle') == "PUYO") {
-        document.getElementById("v15").setAttribute("selected","")
-      } else if (localStorage.getItem('soundStyle') == "MARBLEULTRA") {
-        document.getElementById("v16").setAttribute("selected","")
-      } else if (localStorage.getItem('soundStyle') == "FE2") {
-        document.getElementById("v17").setAttribute("selected","")
-      } else {
-        document.getElementById("v3").setAttribute("selected","")
-      }
-    </script>
-    <br />
-    <br />
     <fieldset>
-      <a href="#" onclick="setSoundEnabled(document.getElementById('soundEnabled').selectedIndex); soundStyleManager('set',document.getElementById('soundStyle').selectedIndex); soundStyleManager('load');">
+      <a href="#" onclick="setSoundEnabled(document.getElementById('soundEnabled').selectedIndex); soundStyleManager('set',0); soundStyleManager('load');">
         <div>
           <div>
             <label>Save Changes<br></label>
