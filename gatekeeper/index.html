@@ -4,7 +4,7 @@
 
 <head>
   <title>Thomas - Gatekeeper Disabler</title>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="../style.css">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="icon" type="image/x-icon" href="./favicon.ico">
   <meta content="Thomas - Gatekeeper Disabler" property="og:title">
@@ -38,10 +38,13 @@
     <p>running macOS Sequoia Developer Beta 3 or newer.</p>
     <br />
     <p>You're probably wondering what this is for if you clicked on here.</p>
-    <p>Long story short, in macOS Developer Beta 3, the commands</p>
-    <p>"spctl --master-disable" and "spctl --global-disable" were</p>
+    <p>Long story short, in macOS Developer Beta 3, spctl's arguments</p>
+    <p>"spctl --master-disable" and "spctl --global-disable" were</p>
     <p>disabled... which were one of the few ways you</p>
     <p>could disable gatekeeper.</p>
+    <br />
+    <p>Both arguments now return this, saying:</p>
+    <p>This operation is no longer supported. To disable the assessment subsystem, please use configuration profiles.</p>
     <br />
     <p>Recently though, I found a blog post by qi-xmu that showed</p>
     <p>how to disable gatekeeper after this change, so shout out to them.</p>
