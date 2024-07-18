@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+  <title>Thomas - Gatekeeper Disabler</title>
+  <link rel="stylesheet" href="/style.css">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+  <meta content="Thomas - Gatekeeper Disabler" property="og:title">
+  <meta content="Disable Gatekeeper using a configuration profile." property="og:description">
+  <meta content="https://thomasluigi07.com/gatekeeper" property="og:url">
+  <meta content="/iPhoneWebApp/icon.png" property="og:image">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <link rel="apple-touch-icon" href="/iPhoneWebApp/icon.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/iPhoneWebApp/icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/iPhoneWebApp/icon.png">
+  <link rel="apple-touch-startup-image" href="/iPhoneWebApp/splash.png" />
+  <link rel="manifest" href="/manifest.json">
+  <script src="/js/sound.js"></script>
+  <meta content="#2394de" data-react-helmet="true" name="theme-color">
+</head>
+
+<body>
+  <audio id="load"><source src="" type="audio/wav"></audio>
+  <audio id="select"><source src="" type="audio/wav"></audio>
+  <audio id="back"><source src="" type="audio/wav"></audio>
+  <audio id="invalid"><source src="" type="audio/wav"></audio>
+  <audio id="leavesite"><source src="" type="audio/wav"></audio>
+  <div class="navbar">
+    <p>Gatekeeper Disabler</p>
+  </div>
+  <div class="content">
+    <h1>Gatekeeper Disabler</h1>
+    <br/>
+    <p>NOTE: This is really only useful to users/developers</p>
+    <p>running macOS Sequoia Developer Beta 3 or newer.</p>
+    <br />
+    <p>You're probably wondering what this is for if you clicked on here.</p>
+    <p>Long story short, in macOS Developer Beta 3, the commands</p>
+    <p>"spctl --master-disable" and "spctl --global-disable"</p>
+    <p>were disabled... which were one of the few</p>
+    <p>ways you can disable gatekeeper.</p>
+    <br />
+    <p>Recently though, I found a blog by qi-emu that actually showed</p>
+    <p>how to disable gatekeeper after this change, so shout out to them.</p>
+    <br />
+    <p>The method uses configuration profiles, meaning that simply you can just install it</p>
+    <p>and not run any commands in Termainal. However the profile is not signed due to me</p>
+    <p>not having a paid apple developer account.</p>
+    <br />
+    <p>Please use at your own risk though, as disabiling gatekeeper basically</p>
+    <p>allows any app to run. Make sure you trust what you download and run!</p>
+    <br />
+    <fieldset>
+      <a onclick="playSound('select')" download href="./gatekeeper.mobileconfig">
+        <div>
+          <div>
+            <label>Download Gatekeeper Disabler<br></label>
+          </div>
+        </div>
+      </a>
+      <a onclick="playSound('select')" href="https://www.cnblogs.com/qi-xmu/p/18298100">
+        <div>
+          <div>
+            <label>qi-xmu's blog post<br></label>
+          </div>
+        </div>
+      </a>
+      <a onclick="playSound('back')" href="../index.html">
+        <div>
+          <div>
+            <label>Go Back<br></label>
+          </div>
+        </div>
+      </a>
+    </fieldset>
+  </div>
+</body>
+
+</html>
