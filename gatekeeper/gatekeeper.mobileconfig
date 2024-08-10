@@ -34,7 +34,7 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>This disables Gatekeeper and stops it from turning back on. Tested on macOS Sequoia Developer Beta 3 and 4.</string>
+	<string>This configuration profile disables Gatekeeper and stops it from turning back on.</string>
 	<key>PayloadDisplayName</key>
 	<string>Gatekeeper Disabler</string>
 	<key>PayloadIdentifier</key>
