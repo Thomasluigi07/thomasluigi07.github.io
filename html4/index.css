@@ -1,21 +1,21 @@
 html {
-    background: url('waves.gif');
+    background: white;
 }
 
 p, h1, h3 {
-    color: white;
-    font-family: 'Lucida Grande', 'Helvetica', 'Tahoma', Arial, sans-serif;
+    color: black;
+    font-family: 'Lucida Grande', 'Helvetica', 'Tahoma', 'Veranda', Arial, sans-serif;
     text-align: left;
 }
 
 tr, td {
     color: black;
-    font-family: 'Lucida Grande', 'Helvetica', 'Tahoma', Arial, sans-serif;
+    font-family: 'Lucida Grande', 'Helvetica', 'Tahoma', 'Veranda', Arial, sans-serif;
     text-align: left;
 }
 
 tr {
-    background: white;
+    background: lightgrey;
 }
 
 tr img {
@@ -24,13 +24,13 @@ tr img {
 
 th {
     color: black;
-    font-family: 'Lucida Grande', 'Helvetica', 'Tahoma', Arial, sans-serif;
+    font-family: 'Lucida Grande', 'Helvetica', 'Tahoma', 'Veranda', Arial, sans-serif;
     text-align: center;
 }
 
 
 a {
     color: #507ddd;
-    font-family: 'Lucida Grande', 'Helvetica', 'Tahoma', Arial, sans-serif;
+    font-family: 'Lucida Grande', 'Helvetica', 'Tahoma', 'Veranda', Arial, sans-serif;
     text-align: left;
 }
