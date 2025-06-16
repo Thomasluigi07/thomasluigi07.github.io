@@ -17,12 +17,15 @@ fieldset>a>div>div>label.url {
     cursor: url(LinkSelect.cur), pointer;
 }
 
+button {
+    background: none;
+    width: 100%;
+}
+
 input,
 textarea {
     cursor: url(TextSelect.cur), text;
 }
-
-* {}
 
 html,
 body {
@@ -133,7 +136,8 @@ panel {
 
 fieldset>div,
 panel>block,
-fieldset>a>div>div>label.detail {
+fieldset>a>div>div>label.detail,
+fieldset>button>div>div>label.detail{
     -webkit-user-select: text;
     user-select: text;
     -moz-user-select: element;
@@ -141,10 +145,16 @@ fieldset>a>div>div>label.detail {
     user-select: element
 }
 
-fieldset>a[href] {
+fieldset>a[href]{
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
 }
+
+fieldset>button {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
 
 * {
     border: 0;
@@ -166,7 +176,8 @@ fieldset>a[href] {
 }
 
 .clearfix:after,
-fieldset>a>div>div:after {
+fieldset>a>div>div:after,
+fieldset>button>div>div:after{
     content: ".";
     display: block;
     clear: both;
@@ -176,7 +187,8 @@ fieldset>a>div>div:after {
 }
 
 .clearfix,
-fieldset>a>div>div {
+fieldset>a>div>div,
+fieldset>button>div>div{
     display: block
 }
 
@@ -379,6 +391,7 @@ panel>block a {
 }
 
 fieldset>a,
+fieldset>button,
 fieldset>div,
 fieldset>textarea {
     display: block;
@@ -387,6 +400,7 @@ fieldset>textarea {
 }
 
 panel>fieldset>a,
+panel>fieldset>button,
 panel>fieldset>div,
 panel>fieldset>textarea {
     border-bottom: 1px solid #999
@@ -402,6 +416,8 @@ fieldset>a:last-child,
 fieldset>a.left:nth-last-child(2),
 fieldset>div:last-child,
 fieldset>div.left:nth-last-child(2),
+fieldset>button:last-child,
+fieldset>button.left:nth-last-child(2),
 fieldset>textarea:last-child,
 fieldset>textarea.left:nth-last-child(2) {
     border-bottom: 0
@@ -409,6 +425,7 @@ fieldset>textarea.left:nth-last-child(2) {
 
 panel>fieldset>a:first-child,
 panel>fieldset>div:first-child,
+panel>fieldset>button:first-child,
 panel>fieldset>textarea:first-child {
     -moz-border-radius-topleft: 8px;
     -webkit-border-top-left-radius: 8px;
@@ -420,6 +437,7 @@ panel>fieldset>textarea:first-child {
 
 panel>fieldset>a.left:first-child,
 panel>fieldset>div.left:first-child,
+panel>fieldset>button.left:first-child,
 panel>fieldset>textarea.left:first-child {
     -moz-border-radius-topright: 0;
     -webkit-border-top-right-radius: 0;
@@ -428,6 +446,7 @@ panel>fieldset>textarea.left:first-child {
 
 panel>fieldset>a.right:nth-child(2),
 panel>fieldset>div.right:nth-child(2),
+panel>fieldset>button.right:nth-child(2),
 panel>fieldset>textarea.right:nth-child(2) {
     -moz-border-radius-topright: 8px;
     -webkit-border-top-right-radius: 8px;
@@ -436,6 +455,7 @@ panel>fieldset>textarea.right:nth-child(2) {
 
 panel>fieldset>a:last-child,
 panel>fieldset>div:last-child,
+panel>fieldset>button:last-child,
 panel>fieldset>textarea:last-child {
     -moz-border-radius-bottomleft: 8px;
     -webkit-border-bottom-left-radius: 8px;
@@ -447,6 +467,7 @@ panel>fieldset>textarea:last-child {
 
 panel>fieldset>a.left:nth-last-child(2),
 panel>fieldset>div.left:nth-last-child(2),
+panel>fieldset>button.left:nth-last-child(2),
 panel>fieldset>textarea.left:nth-last-child(2) {
     -moz-border-radius-bottomleft: 8px;
     -webkit-border-bottom-left-radius: 8px;
@@ -455,6 +476,7 @@ panel>fieldset>textarea.left:nth-last-child(2) {
 
 panel>fieldset>a.right:last-child,
 panel>fieldset>div.right:last-child,
+panel>fieldset>button.right:last-child,
 panel>fieldset>textarea.right:last-child {
     -moz-border-radius-bottomleft: 0;
     -webkit-border-bottom-left-radius: 0;
@@ -471,22 +493,26 @@ fieldset>img.close {
     height: 29px
 }
 
-fieldset>a>div>div>label>p {
+fieldset>a>div>div>label>p,
+fieldset>button>div>div>label>p{
     display: inline;
     text-rendering: optimizeLegibility
 }
 
-fieldset>a>div>div>label:first-child {
+fieldset>a>div>div>label:first-child,
+fieldset>button>div>div>label:first-child{
     font-weight: bold
 }
 
-fieldset>a>div>div>label.detail {
+fieldset>a>div>div>label.detail,
+fieldset>button>div>div>label.detail{
     display: inline-block;
     float: right;
     text-align: right
 }
 
-fieldset>a>div>div>label.price {
+fieldset>a>div>div>label.price,
+fieldset>button>div>div>label.price{
     display: inline-block;
     float: right;
     background-color: #2463de;
@@ -500,7 +526,8 @@ fieldset>a>div>div>label.price {
     margin: -0.2em -0.4em
 }
 
-fieldset>a>div>div>label.verbose {
+fieldset>a>div>div>label.verbose,
+fieldset>button>div>div>label.verbose{
     display: inline-block;
     float: right;
     font-size: 10px;
@@ -509,19 +536,22 @@ fieldset>a>div>div>label.verbose {
     text-align: center
 }
 
-fieldset>a>div>div>label.lower {
+fieldset>a>div>div>label.lower,
+fieldset>button>div>div>label.lower{
     display: block;
     font-size: 13px
 }
 
-fieldset>a>div>div>label.url {
+fieldset>a>div>div>label.url,
+fieldset>button>div>div>label.url{
     display: block;
     font-size: 14px;
     font-style: italic;
     word-wrap: break-word
 }
 
-fieldset>a>span.extra {
+fieldset>a>span.extra,
+fieldset>button>span.extra{
     position: absolute;
     -moz-border-radius-bottomleft: 7px;
     -webkit-border-bottom-left-radius: 7px;
@@ -543,7 +573,8 @@ div.cy-table>fieldset>a>span.extra {
     right: 0px
 }
 
-fieldset>a>span.badge {
+fieldset>a>span.badge,
+fieldset>button>span.badge{
     position: absolute;
     bottom: 0px;
     right: 0px;
@@ -604,7 +635,8 @@ fieldset>a>div {
     /* margin-left: 14px; */
 }
 
-fieldset>a>div>div {
+fieldset>a>div>div,
+fieldset>button>div>div{
     padding: 10px 14px 10px 0
 }
 
@@ -721,7 +753,8 @@ div.cy-table>fieldset.half>a {
     border-right-style: solid
 }
 
-fieldset>a[href]>div {
+fieldset>a[href]>div,
+fieldset>button>div{
     padding-right: 14px;
     background: -webkit-linear-gradient(bottom, #161616 0%, #373636 100%);
     background: -ms-linear-gradient(bottom, #161616 0%, #373636 100%);
@@ -732,36 +765,18 @@ fieldset>a[href]>div {
 
 fieldset>a>div>div>select,
 fieldset>a[href]>div>div {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAANCAYAAACQN/8FAAAAUElEQVQoz2NggIKysrI6EGbAB6CK/kNxHT6FLUgKQbiaaorb0RRXUK4YKCENxG+RFD4BYiFsim6jKVKhnSIWID6CVxGSYhWoAtyK0BTjVAQA7b9/uRuNojcAAAAASUVORK5CYII=');
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAdnJLH8AAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAANxJREFUSMe91bsNwjAUheH/RGQENmAFCkRLRIGo2RFBhSKGQLQgdmADBJcmggj5mUTcKoX9yb4+scFRZrYwsxUdauTAKmDefCOpzgHlw1p1ykHVwpbAzDMuGS0arATGgXHT1J62V1gCG2ASGB9d6W8Pe6NynHIvVJ4cJqHAUdIrCmagF2Av6RkFu6KKxSARvQI7SU+lZCsHLRiuiiG3fAO20S3n9u9/sUnEzkAdDXYqJukw1OXgxbpcX0HsAw6FfcMoPYB7X8zVQ9e7koz5Trn98mVhoT+kMrN1l8lvWWuKaSF+Rv8AAAAASUVORK5CYII=');
     background-position: right center;
     background-repeat: no-repeat;
     padding-right: 24px;
     -webkit-background-size: 10px 13px;
     background-size: 10px 13px;
-    filter: invert(1);
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 2) {
-
-    fieldset>a>div>div>select,
-    fieldset>a[href]>div>div {
-        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAAn0lEQVRIx73VUQqAIBAEUCm6WWIQ/hZBh+nmtkGGyKKzuiTMj8FD1sFMCMHkoTVTVu5bLRxmKdcbMVrCmtAUcwwmRiM2Uc4CCKPpCVXQfIbdKHfLXSi/CaKUAQIF6EYZIbAVrdcAQ/eIYmUVoJrgAYESTOtSvvn9VxsQ81CxUUzzcfDFuWti0ge2iuUnXHoxboauB0N+oyKs1EPbgj25AROsvvXJNxxhAAAAAElFTkSuQmCC');
-        text-align: left;
-        padding-left: 10px;
-    }
 }
 
 fieldset.dark>a>div>div>select,
+fieldset.dark>button>div>div>select,
 fieldset.dark>a[href]>div>div {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAANCAYAAACQN/8FAAAAUElEQVQoz2NggILOzs46EGbAB6CK/kNxHT6FLUgKQbiaaorb0RRXUK4YKCENxG+RFD4BYiFsim6jKVKhnSIWID6CVxGSYhWoAtyK0BTjVAQADpCNh/CoZr0AAAAASUVORK5CYII=')
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 2) {
-
-    fieldset.dark>a>div>div>select,
-    fieldset.dark>a[href]>div>div {
-        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAAnElEQVRIx73U0QqAIAwFUCn6s6Qgei2CPqY/N4MMkU2u2+jhgi44hk5dCMERGWMW5ls1VNHHXG+a0RomQvPJRGDNaBoMMWcFhNF8YoKWBTVKFVUotxKKdiiIoltMj4IiFOktBN0Tit4AGLUEDxSEMatD+fbv17ZBsBVtbBQzexxYrATVWA6aYOUfzlqM2sNJg3Gn7KVYrQ+9BHtyAx0sbnA+jpPNAAAAAElFTkSuQmCC')
-    }
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAdnJLH8AAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAANxJREFUSMe91bsNwjAUheH/RGQENmAFCkRLRIGo2RFBhSKGQLQgdmADBJcmggj5mUTcKoX9yb4+scFRZrYwsxUdauTAKmDefCOpzgHlw1p1ykHVwpbAzDMuGS0arATGgXHT1J62V1gCG2ASGB9d6W8Pe6NynHIvVJ4cJqHAUdIrCmagF2Av6RkFu6KKxSARvQI7SU+lZCsHLRiuiiG3fAO20S3n9u9/sUnEzkAdDXYqJukw1OXgxbpcX0HsAw6FfcMoPYB7X8zVQ9e7koz5Trn98mVhoT+kMrN1l8lvWWuKaSF+Rv8AAAAASUVORK5CYII=')
 }
 
 fieldset>a>div>div>input[type="checkbox"] {
@@ -884,8 +899,11 @@ fieldset>div>p {
 
 fieldset>a>div>div>label:first-child,
 fieldset>a>div>div>label.lower,
-fieldset>a>div>div>label.url {
-    filter: invert(1);
+fieldset>a>div>div>label.url,
+fieldset>button>div>div>label:first-child,
+fieldset>button>div>div>label.lower,
+fieldset>button>div>div>label.url {
+    color: #f7f7f7
 }
 
 .content h1 a {
@@ -893,14 +911,19 @@ fieldset>a>div>div>label.url {
 }
 
 fieldset>a>div>div>select,
-fieldset>a[href]>div>div {
+fieldset>button>div>div>select,
+fieldset>a[href]>div>div,
+fieldset>button>div>div{
     text-align: left;
 }
 
 fieldset>a>div>div>label:first-child,
 fieldset>a>div>div>label.lower,
-fieldset>a>div>div>label.url {
-    padding-left: 1%;
+fieldset>a>div>div>label.url,
+fieldset>button>div>div>label:first-child,
+fieldset>button>div>div>label.lower,
+fieldset>button>div>div>label.url {
+    padding-left: 3%;
 }
 
 .reviews {

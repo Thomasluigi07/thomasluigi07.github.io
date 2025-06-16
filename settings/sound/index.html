@@ -52,64 +52,63 @@
     <br />
     <br />
     <fieldset>
-      <a href="#" onclick="setSoundEnabled(document.getElementById('soundEnabled').selectedIndex);">
+      <button onclick="setSoundEnabled(document.getElementById('soundEnabled').selectedIndex);">
         <div>
           <div>
             <label>Save Changes<br></label>
           </div>
         </div>
-      </a>
+      </button>
       <p>If sounds don't play,</p>
       <p>try enabling sound autoplay</p>
       <p>for this site.</p>
       <br />
-      <br />
-      <p>Or it may be your</p>
+      <p>It may be your</p>
       <p>browser causing the</p>
       <p>audio to not play.</p>
       <br />
-      <br />
-      <p>Sound Test</p>
       <p>Click on the buttons</p>
       <p>below to test a sound.</p>
-      <p>Make sure to save your</p>
-      <p>sound settings if you've</p>
-      <p>changed your sound style.</p>
-      <a onclick="playSound('load');" href="#">
+      <p>Make sure to enable your</p>
+      <p>sound first before you</p>
+      <p>play a sound.</p>
+      <br>
+      <p class="gotoleft">Sound Test</p>
+      <button onclick="playSound('load');">
         <div>
           <div>
             <label>Page load sound<br></label>
           </div>
         </div>
-      </a>
-      <a onclick="playSound('select');" href="#">
+      </button>
+      <button onclick="playSound('select');">
         <div>
           <div>
             <label>Select sound<br></label>
           </div>
         </div>
-      </a>
-      <a onclick="playSound('back');" href="#">
+      </button>
+      <button onclick="playSound('back');">
         <div>
           <div>
             <label>Back sound<br></label>
           </div>
         </div>
-      </a>
-      <a onclick="playSound('invalid');" href="#">
+      </button>
+      <button onclick="playSound('invalid');">
         <div>
           <div>
             <label>Invalid sound<br></label>
           </div>
         </div>
-      </a>
-      <a onclick="playSound('leavesite');" href="#">
+      </button>
+      <button onclick="playSound('leavesite');">
         <div>
           <div>
             <label>Leaving site sound<br></label>
           </div>
         </div>
-      </a>
+      </button>
       <br />
       <br />
       <a onclick="playSound('back')" href="../index.html">
