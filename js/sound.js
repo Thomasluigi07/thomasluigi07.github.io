@@ -4,12 +4,12 @@
 if (localStorage.getItem('soundEnabled') == null) {
     localStorage.setItem('soundEnabled', "true");
 }
-if (localStorage.getItem('soundStyle') == null) {
-    localStorage.setItem('soundStyle', "HL1");
-}
-if (localStorage.getItem('musicEnabled') == null) {
-    localStorage.setItem('musicEnabled', "false");
-}
+//if (localStorage.getItem('soundStyle') == null) { Leftover stuff
+//    localStorage.setItem('soundStyle', "HL1");
+//}
+//if (localStorage.getItem('musicEnabled') == null) {
+//    localStorage.setItem('musicEnabled', "false");
+//}
 
 // play sound from audio id
 function playSound(audioId, secondAudioId) {
@@ -41,12 +41,14 @@ function playSound(audioId, secondAudioId) {
 function soundStyleManager(mode, style) {
     if (mode == "set") {
         if (style == 0) {
+            console.warn("While the soundStyle has been set, this code is not functional anymore.");
             localStorage.setItem('soundStyle', "HL1");
         } else {
-            console.warn("Invalid Style!");
+           console.warn("Invalid Style!");
         }
     } else if (mode == "load") {
-        var soundStyle = localStorage.getItem("soundStyle");
+        console.warn("Loading the soundStyle will break sounds locally. Do not use this function anymore.");
+        var soundStyle = "HL1";
         if (document.getElementById("load") !== null) {
             document.getElementById("load").setAttribute("src", "/sound/" + soundStyle + "/load.wav");
             document.getElementById("load").preload = 'auto';
@@ -85,6 +87,6 @@ function setSoundEnabled(enabled) {
 
 // if this runs it works!!! :)
 window.addEventListener('load', function () {
-    soundStyleManager("load");
+    // soundStyleManager("load"); Not needed anymore as it just is hardcoded to use HL1 now.
     playSound("load");
 })
