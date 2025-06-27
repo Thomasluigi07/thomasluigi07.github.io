@@ -120,6 +120,79 @@ footer p {
     padding: 5px
 }
 
+
+.reviews {
+    border-collapse: collapse;
+    max-width: 550px;
+    margin-left: 25px;
+}
+
+main .review h3, main .review .left p,  {
+}
+
+special {
+    font-family: Helvetica, Tahoma, Arial, sans-serif;
+}
+
+.left,
+.right {
+    padding: 10px;
+    border: #000 solid 3px;
+    background: lightgrey;
+    background: #eee;
+    border-radius: 0px;
+}
+
+.left p,
+.left h3,
+.left h4,
+.left h5 {
+    text-align: left;
+    padding: 0px;
+    padding-top: 0px;
+}
+
+.left h4 {
+    margin-bottom: 10px;
+    padding: 0px;
+    padding-top: 0px;
+}
+
+
+.left {
+    width: 70%;
+    border-right: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 5px;
+}
+
+.right {
+    width: 30%;
+    text-align: center;
+    border-left-style: dashed;
+    border-left-width: 1px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 0px;
+}
+
+.right img,
+.right video {
+    width: 80%;
+    padding-left: 0px;
+    padding-right: 0px;
+    display: unset;
+}
+
+.right a {
+    color: cornflowerblue;
+    text-decoration: underline;
+}
+
+
 @font-face {
     font-family: 'Lucida Grande';
     font-style: normal;
