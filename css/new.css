@@ -189,6 +189,26 @@ special {
     text-decoration: underline;
 }
 
+#musicPlayer {
+    display: none;
+}
+
+#musicControl {
+    display: inline;
+    margin-left: 3px;
+    width: 44px;
+    height: 44px;
+    content: url('soundoff.png');
+}
+
+#musicControl.paused {
+ content: url('soundoff.png');
+}
+
+#musicControl.playing {
+content: url('soundon.png');
+}
+
 
 @font-face {
     font-family: 'Lucida Grande';
@@ -203,7 +223,7 @@ special {
     margin: 0px;
 }
 
-a, p a, p a img {
+a, p a, p a img, #musicControl {
     cursor: url(LinkSelect.cur), pointer;
 }
 
