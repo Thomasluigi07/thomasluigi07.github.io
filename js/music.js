@@ -39,6 +39,7 @@ function initAudio() {
                     console.log("Couldn't set up onclick")
                 }
             }
+            musicPlayer.pause();
             var a = document.getElementsByClassName('header');
             var header = a[0];
             document.querySelector('container').appendChild(musicPlayer);
