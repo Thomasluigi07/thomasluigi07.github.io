@@ -194,10 +194,10 @@ special {
 }
 
 #musicControl {
-    display: inline;
-    margin-left: 3px;
-    width: 44px;
-    height: 44px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: auto;
     content: url('soundoff.png');
 }
 

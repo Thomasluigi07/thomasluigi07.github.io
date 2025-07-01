@@ -21,6 +21,7 @@ function initAudio() {
             musicPlayer.setAttribute("loop", "loop");
             musicPlayer.setAttribute("muted", "muted");
             musicPlayer.setAttribute("src", music.content);
+            var table = document.createElement('td');
             var musicControl = document.createElement('img');
             musicControl.id = "musicControl";
             musicControl.className = "paused";
@@ -42,8 +43,9 @@ function initAudio() {
             musicPlayer.pause();
             var a = document.getElementsByClassName('header');
             var header = a[0];
+            table.appendChild(musicControl);
             document.querySelector('container').appendChild(musicPlayer);
-            document.querySelector('footer').children[0].appendChild(musicControl);
+            document.querySelector('tr').appendChild(table);
         }
     }
 }
