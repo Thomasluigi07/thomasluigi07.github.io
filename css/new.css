@@ -221,6 +221,8 @@ content: url('soundon.png');
     font-family: "Lucida Grande", "Helvetica", "Tahoma", "Veranda", "Arial", sans-serif;
     cursor: url(NormalSelect.cur), default;
     margin: 0px;
+    -ms-text-size-adjust: none;
+    -moz-text-size-adjust: none;
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
 }
