@@ -86,6 +86,7 @@ main textarea {
     max-width: 590px;
     max-height: 50px;
     border: 0px;
+    -moz-resize: vertical;
     resize: vertical;
     font-family: monospace;
 }
@@ -95,7 +96,7 @@ main img {
     padding-top: 0px;
     width: 450px;
     padding-left: 75px;
-    padding-right: 75   px;
+    padding-right: 75px;
     display: block;
 }
 
@@ -159,9 +160,17 @@ special {
 .left {
     width: 70%;
     border-right: 0px;
+    -webkit-border-top-left-radius: 5px;
+    -moz-border-radius-topleft: 5px;
     border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 0px;
+    -moz-border-radius-topright: 0px;
     border-top-right-radius: 0px;
+    -webkit-border-bottom-right-radius: 0px;
+    -moz-border-radius-bottomright: 0px;
     border-bottom-right-radius: 0px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
     border-bottom-left-radius: 5px;
 }
 
@@ -170,9 +179,17 @@ special {
     text-align: center;
     border-left-style: dashed;
     border-left-width: 1px;
+    -webkit-border-top-left-radius: 0px;
+    -moz-border-radius-topleft: 0px;
     border-top-left-radius: 0px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topright: 5px;
     border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
     border-bottom-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 0px;
+    -moz-border-radius-bottomleft: 0px;
     border-bottom-left-radius: 0px;
 }
 
@@ -194,6 +211,7 @@ special {
 }
 
 #musicControl {
+    -moz-display: block;
     display: block;
     width: 16px;
     height: 16px;
@@ -202,11 +220,11 @@ special {
 }
 
 #musicControl.paused {
- content: url('soundoff.png');
+    content: url('soundoff.png');
 }
 
 #musicControl.playing {
-content: url('soundon.png');
+    content: url('soundon.png');
 }
 
 
