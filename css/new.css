@@ -221,6 +221,7 @@ content: url('soundon.png');
     font-family: "Lucida Grande", "Helvetica", "Tahoma", "Veranda", "Arial", sans-serif;
     cursor: url(NormalSelect.cur), default;
     margin: 0px;
+    text-size-adjust: none;
 }
 
 a, p a, p a img, #musicControl {
