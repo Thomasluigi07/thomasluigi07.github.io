@@ -86,6 +86,8 @@ header, main, footer {
     margin-top: 0px;
     margin-bottom: 0px;
     background: white;
+    min-width: 600px;
+    max-width: 600px;
     width: 600px;
 }
 
