@@ -82,6 +82,7 @@ container {
 }
 
 header, main, footer {
+    display: block;
     margin: auto;
     margin-top: 0px;
     margin-bottom: 0px;
