@@ -239,26 +239,42 @@ special {
     text-decoration: underline;
 }
 
-#musicPlayer {
+#musicPlayer, #sfx_select, #sfx_ok, #sfx_hover0, #sfx_hover1, #sfx_hover2, #sfx_hover3, #sfx_hover4, #sfx_hover5 {
     display: none;
 }
 
-#musicControl {
+#musicControl, #soundControl {
     -moz-display: block;
     display: block;
     width: 16px;
     height: 16px;
     margin: auto;
-    content: url('soundoff.png');
+}
+
+#musicControl {
+    content: url('musicoff.png');
 }
 
 #musicControl.paused {
-    content: url('soundoff.png');
+    content: url('musicoff.png');
 }
 
 #musicControl.playing {
+    content: url('musicon.png');
+}
+
+#soundControl {
+    content: url('soundoff.png');
+}
+
+#soundControl.off {
+    content: url('soundoff.png');
+}
+
+#soundControl.on {
     content: url('soundon.png');
 }
+
 
 
 @font-face {
