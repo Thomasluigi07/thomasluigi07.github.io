@@ -64,7 +64,11 @@ function initEffects() {
                 // This code sucks balls. God forbid I add more than 2 subdirectories in the future..
                 var musicDir = music.content.substring(0, music.content.indexOf('/') + 7);
             }
+        } else if (musicDir == "/") {
+            // 404 page fix
+            var musicDir = music.content.substring(0, music.content.indexOf('/') + 4);
         }
+        console.log(musicDir);
         if (quicklinks && musicDir) {
             var sfx_select = document.createElement('audio');
             sfx_select.id = "sfx_select";
@@ -89,13 +93,13 @@ function initEffects() {
             sfx_hover4.setAttribute("src", musicDir+"hover4.mp3");
             const sfx_hovers = [sfx_hover0,sfx_hover1,sfx_hover2,sfx_hover3,sfx_hover4]
             if (quicklinks) {
-                addSoundsToButtons(quicklinks.querySelector('tr'),sfx_hovers);
+                addSoundsToButtons(quicklinks.querySelector('tr'),sfx_hovers,false);
             }
             if (navigation) {
-                addSoundsToButtons(navigation.querySelector('tr'),sfx_hovers);
+                addSoundsToButtons(navigation.querySelector('tr'),sfx_hovers,true);
             }
             if (footer) {
-                addSoundsToButtons(footer.querySelector('p'),sfx_hovers);
+                addSoundsToButtons(footer.querySelector('p'),sfx_hovers,false);
             }
             var table = document.createElement('td');
             var soundControl = document.createElement('img');
@@ -140,7 +144,7 @@ function initEffects() {
     }
 }
 
-function addSoundsToButtons(parent,hovers) {
+function addSoundsToButtons(parent,hovers,alt) {
     for (let i = 0; i < parent.children.length; i++) {
         if (parent.children[i].querySelector('a')) {
             var btn = parent.children[i].children[0];
@@ -151,7 +155,7 @@ function addSoundsToButtons(parent,hovers) {
         }
         // Selection sounds. Fuck this code.
         try {
-            if (parent.className == "navigation") {
+            if (alt) {
                 btn.onclick = function() {playSoundEffect(sfx_ok);};
             } else {
                 btn.onclick = function() {playSoundEffect(sfx_select);};
@@ -159,11 +163,19 @@ function addSoundsToButtons(parent,hovers) {
         } catch {
             if(btn.addEventListener){
                 btn.addEventListener('click', function(){
-                    playSoundEffect(sfx_select);
+                    if (alt) {
+                        playSoundEffect(sfx_ok);
+                    } else {
+                        playSoundEffect(sfx_select);
+                    }
                 });
-            } else if(musicControl.attachEvent){
+            } else if(btn.attachEvent){
                 btn.attachEvent('onclick', function(){
-                    playSoundEffect(sfx_select);
+                    if (alt) {
+                        playSoundEffect(sfx_ok);
+                    } else {
+                        playSoundEffect(sfx_select);
+                    }
                 });
             } else {
                 console.log("Couldn't set up select sound effect")
@@ -177,7 +189,7 @@ function addSoundsToButtons(parent,hovers) {
                 btn.addEventListener('mouseover', function(){
                     playSoundEffect(hovers[i]);
                 });
-            } else if(musicControl.attachEvent){
+            } else if(btn.attachEvent){
                 btn.attachEvent('onmouseover', function(){
                     playSoundEffect(hovers[i]);
                 });
