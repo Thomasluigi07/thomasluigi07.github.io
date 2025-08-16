@@ -68,7 +68,6 @@ function initEffects() {
             // 404 page fix
             var musicDir = music.content.substring(0, music.content.indexOf('/') + 4);
         }
-        console.log(musicDir);
         if (quicklinks && musicDir) {
             var sfx_select = document.createElement('audio');
             sfx_select.id = "sfx_select";
