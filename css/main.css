@@ -294,6 +294,10 @@ special {
     text-size-adjust: none;
 }
 
+a > img{
+    border: 0;
+}
+
 a, p a, p a img, #musicControl {
     cursor: url(LinkSelect.cur), pointer;
 }
