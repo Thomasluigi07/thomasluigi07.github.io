@@ -1,4 +1,4 @@
-.header {
+.title {
     width: 600px;
     height: 50px;
     height: fit-content;
@@ -7,7 +7,7 @@
     background-image: url('navtop.png');
 }
 
-.header h1 {
+.title h1 {
     margin: 3px;
     margin-left: 5px;
     margin-right: 3px;
@@ -70,7 +70,7 @@ body {
     margin: 0px;
 }
 
-container {
+.container {
     display: block;
     width: 100%;
     position: relative;
@@ -81,7 +81,7 @@ container {
     background-position: top center;
 }
 
-header, main, footer {
+.header, .main, .footer {
     display: block;
     margin: auto;
     margin-top: 0px;
@@ -92,16 +92,16 @@ header, main, footer {
     width: 600px;
 }
 
-main {
+.main {
     min-height: 400px;
 }
 
-main h3, main h4, main p, footer p {
+.main h3, .main h4, .main p, .footer p {
     padding: 5px;
     padding-top: 0px;
 }
 
-main textarea {
+.main textarea {
     padding: 5px;
     width: 600px;
     max-width: 590px;
@@ -112,7 +112,7 @@ main textarea {
     font-family: monospace;
 }
 
-main img {
+.main img {
     padding: 5px;
     padding-top: 0px;
     width: 450px;
@@ -121,11 +121,11 @@ main img {
     display: block;
 }
 
-footer {
+.footer {
     min-height: 50px;
 }
 
-footer p {
+.footer p {
     text-align: center;
 }
 

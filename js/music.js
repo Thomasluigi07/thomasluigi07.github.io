@@ -46,17 +46,17 @@ function initMusic() {
             }
             musicPlayer.pause();
             table.appendChild(musicControl);
-            document.querySelector('container').appendChild(musicPlayer);
-            document.querySelector('tr').appendChild(table);
+            document.getElementById('container').appendChild(musicPlayer);
+            document.getElementById('header').querySelector('tr').appendChild(table);
         }
     }
 }
 
 function initEffects() {
     if (CanPlayAudio) {
-        var quicklinks = document.querySelector('container').getElementsByClassName('quicklinks')[0];
-        var navigation = document.querySelector('container').getElementsByClassName('navigation')[0];
-        var footer = document.querySelector('container').querySelector('footer');
+        var quicklinks = document.getElementById('quicklinks');
+        var navigation = document.getElementById('navigation');
+        var footer = document.getElementById('footer');
         var musicDir = music.content.substring(0, music.content.indexOf('/') + 1);
         if (musicDir == "../") {
             var musicDir = music.content.substring(0, music.content.indexOf('/') + 4);
@@ -130,15 +130,15 @@ function initEffects() {
                     console.log("Couldn't set up music button properly")
                 }
             }
-            document.querySelector('container').appendChild(sfx_select)
-            document.querySelector('container').appendChild(sfx_ok)
-            document.querySelector('container').appendChild(sfx_hover0)
-            document.querySelector('container').appendChild(sfx_hover1)
-            document.querySelector('container').appendChild(sfx_hover2)
-            document.querySelector('container').appendChild(sfx_hover3)
-            document.querySelector('container').appendChild(sfx_hover4)
+            document.getElementById('container').appendChild(sfx_select)
+            document.getElementById('container').appendChild(sfx_ok)
+            document.getElementById('container').appendChild(sfx_hover0)
+            document.getElementById('container').appendChild(sfx_hover1)
+            document.getElementById('container').appendChild(sfx_hover2)
+            document.getElementById('container').appendChild(sfx_hover3)
+            document.getElementById('container').appendChild(sfx_hover4)
             table.appendChild(soundControl);
-            document.querySelector('tr').appendChild(table);
+            document.getElementById('header').querySelector('tr').appendChild(table);
         }
     }
 }
