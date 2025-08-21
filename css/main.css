@@ -294,7 +294,7 @@ special {
     text-size-adjust: none;
 }
 
-a > img{
+a img{
     border: 0;
 }
 
