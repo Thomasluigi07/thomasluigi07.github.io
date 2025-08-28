@@ -5,7 +5,7 @@ function soundTest() {
         var audioElement = document.createElement('audio');
         return !!(audioElement.canPlayType && audioElement.canPlayType('audio/mpeg;').replace(/no/, ''));
     }
-    catch {
+    catch (err) {
         return false;
     }
 }
