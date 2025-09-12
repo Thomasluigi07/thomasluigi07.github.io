@@ -177,6 +177,10 @@ special {
     padding-top: 0px;
 }
 
+.left .spoiler {
+    color: red;
+}
+
 
 .left {
     width: 70%;
