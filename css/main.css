@@ -121,6 +121,10 @@ body {
     display: block;
 }
 
+.main .render {
+    width: 170px;
+}
+
 .footer {
     min-height: 50px;
 }
