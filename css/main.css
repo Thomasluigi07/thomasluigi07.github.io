@@ -79,6 +79,8 @@ body {
     background-image: url('shadow.png');
     background-repeat: repeat-y;
     background-position: top center;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='shadow.png', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='shadow.png', sizingMethod='scale')";
 }
 
 .header, .main, .footer {
