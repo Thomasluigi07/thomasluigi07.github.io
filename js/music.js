@@ -52,11 +52,24 @@ function initMusic() {
     }
 }
 
+function createAudio(name,path) {
+    var sfx = document.createElement('audio');
+    sfx.id = name;
+    sfx.setAttribute("src", path);
+    if (document.getElementById('container')) {
+        document.getElementById('container').appendChild(sfx);
+    } else {
+         console.log("Couldn't add sounds");
+    }
+    return sfx;
+}
+
 function initEffects() {
     if (CanPlayAudio) {
         var quicklinks = document.getElementById('quicklinks');
         var navigation = document.getElementById('navigation');
         var footer = document.getElementById('footer');
+        var keyboard = document.getElementById('keyboard');
         var musicDir = music.content.substring(0, music.content.indexOf('/') + 1);
         if (musicDir == "../") {
             var musicDir = music.content.substring(0, music.content.indexOf('/') + 4);
@@ -69,28 +82,14 @@ function initEffects() {
             var musicDir = music.content.substring(0, music.content.indexOf('/') + 4);
         }
         if (quicklinks && musicDir) {
-            var sfx_select = document.createElement('audio');
-            sfx_select.id = "sfx_select";
-            sfx_select.setAttribute("src", musicDir+"select.mp3");
-            var sfx_ok = document.createElement('audio');
-            sfx_ok.id = "sfx_ok";
-            sfx_ok.setAttribute("src", musicDir+"ok.mp3");
-            var sfx_hover0 = document.createElement('audio');
-            sfx_hover0.id = "sfx_hover0";
-            sfx_hover0.setAttribute("src", musicDir+"hover0.mp3");
-            var sfx_hover1 = document.createElement('audio');
-            sfx_hover1.id = "sfx_hover1";
-            sfx_hover1.setAttribute("src", musicDir+"hover1.mp3");
-            var sfx_hover2 = document.createElement('audio');
-            sfx_hover2.id = "sfx_hover2";
-            sfx_hover2.setAttribute("src", musicDir+"hover2.mp3");
-            var sfx_hover3 = document.createElement('audio');
-            sfx_hover3.id = "sfx_hover3";
-            sfx_hover3.setAttribute("src", musicDir+"hover3.mp3");
-            var sfx_hover4 = document.createElement('audio');
-            sfx_hover4.id = "sfx_hover4";
-            sfx_hover4.setAttribute("src", musicDir+"hover4.mp3");
-            const sfx_hovers = [sfx_hover0,sfx_hover1,sfx_hover2,sfx_hover3,sfx_hover4]
+            var sfx_select = createAudio("sfx_select",musicDir+"select.mp3");
+            var sfx_ok = createAudio("sfx_ok",musicDir+"ok.mp3");
+            var sfx_hover0 = createAudio("sfx_hover0",musicDir+"hover0.mp3");
+            var sfx_hover1 = createAudio("sfx_hover1",musicDir+"hover1.mp3");
+            var sfx_hover2 = createAudio("sfx_hover2",musicDir+"hover2.mp3");
+            var sfx_hover3 = createAudio("sfx_hover3",musicDir+"hover3.mp3");
+            var sfx_hover4 = createAudio("sfx_hover4",musicDir+"hover4.mp3");
+            const sfx_hovers = [sfx_hover0,sfx_hover1,sfx_hover2,sfx_hover3,sfx_hover4];
             if (quicklinks) {
                 addSoundsToButtons(quicklinks.querySelector('tr'),sfx_hovers,false);
             }
@@ -127,16 +126,9 @@ function initEffects() {
                         playSoundEffect('sfx_select');
                     });
                 } else {
-                    console.log("Couldn't set up music button properly")
+                    console.log("Couldn't set up music button properly");
                 }
             }
-            document.getElementById('container').appendChild(sfx_select)
-            document.getElementById('container').appendChild(sfx_ok)
-            document.getElementById('container').appendChild(sfx_hover0)
-            document.getElementById('container').appendChild(sfx_hover1)
-            document.getElementById('container').appendChild(sfx_hover2)
-            document.getElementById('container').appendChild(sfx_hover3)
-            document.getElementById('container').appendChild(sfx_hover4)
             table.appendChild(soundControl);
             document.getElementById('header').querySelector('tr').appendChild(table);
         }
@@ -177,7 +169,7 @@ function addSoundsToButtons(parent,hovers,alt) {
                     }
                 });
             } else {
-                console.log("Couldn't set up select sound effect")
+                console.log("Couldn't set up select sound effect");
             }
         }
         // Hover sounds. Fuck this code even more.
@@ -193,7 +185,7 @@ function addSoundsToButtons(parent,hovers,alt) {
                     playSoundEffect(hovers[i]);
                 });
             } else {
-                console.log("Couldn't set up hover sound effect")
+                console.log("Couldn't set up hover sound effect");
             }
         }
     }
@@ -207,7 +199,7 @@ function playSoundEffect(sound) {
                 snd.currentTime = 0;
                 snd.play();
             } else {
-                console.log("Couldn't find sound "+snd+" in DOM")
+                console.log("Couldn't find sound "+snd+" in DOM");
             }
         } else {
             sound.currentTime = 0;
@@ -222,16 +214,16 @@ function toggleMusic(musicPlayer,musicControl) {
             musicPlayer.play();
             musicPlayer.muted = false;
             if (musicControl) {
-                musicControl.title = "Music on"
-                musicControl.alt = "Music on"
+                musicControl.title = "Music on";
+                musicControl.alt = "Music on";
                 musicControl.className = "playing";
             }
         } else {
             musicPlayer.pause();
             musicPlayer.muted = true;
             if (musicControl) {
-                musicControl.title = "Music off"
-                musicControl.alt = "Music off"
+                musicControl.title = "Music off";
+                musicControl.alt = "Music off";
                 musicControl.className = "paused";
             }
         }
@@ -241,13 +233,13 @@ function toggleMusic(musicPlayer,musicControl) {
 function toggleSound(soundControl) {
     if (soundControl) {
         if (localStorage.getItem("soundEnabled") == "true") {
-            soundControl.alt = "Sound off"
+            soundControl.alt = "Sound off";
             soundControl.className = "off";
-            soundControl.title = "Sound off"
+            soundControl.title = "Sound off";
             localStorage.setItem("soundEnabled", false);
         } else if (localStorage.getItem("soundEnabled") == "false") {
-            soundControl.title = "Sound on"
-            soundControl.alt = "Sound on"
+            soundControl.title = "Sound on";
+            soundControl.alt = "Sound on";
             soundControl.className = "on";
             localStorage.setItem("soundEnabled", true);
         } else {

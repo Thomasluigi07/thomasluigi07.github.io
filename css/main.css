@@ -308,7 +308,7 @@ a img{
     border: 0;
 }
 
-a, p a, p a img, #musicControl {
+a, p a, p a img, #musicControl, #soundControl {
     cursor: url(LinkSelect.cur), pointer;
 }
 
