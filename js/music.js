@@ -21,7 +21,6 @@ function initMusic() {
             musicPlayer.setAttribute("loop", "loop");
             musicPlayer.setAttribute("muted", "muted");
             musicPlayer.setAttribute("src", music.content);
-            var table = document.createElement('td');
             var musicControl = document.createElement('img');
             musicControl.id = "musicControl";
             musicControl.className = "paused";
@@ -44,10 +43,24 @@ function initMusic() {
                     console.log("Couldn't set up music button properly")
                 }
             }
+            try {
+                musicControl.onmouseover = function() {playSoundEffect(sfx_hover);};
+            } catch {
+                if(musicControl.addEventListener){
+                    soundControl.addEventListener('mouseover', function(){
+                        playSoundEffect(sfx_hover);
+                    });
+                } else if(musicControl.attachEvent){
+                    musicControl.attachEvent('onmouseover', function(){
+                        playSoundEffect(sfx_hover);
+                    });
+                } else {
+                    console.log("Couldn't set up music hover sound effect");
+                }
+            }
             musicPlayer.pause();
-            table.appendChild(musicControl);
-            document.getElementById('container').appendChild(musicPlayer);
-            document.getElementById('header').querySelector('tr').appendChild(table);
+            document.getElementById('naviGAYtionbar').appendChild(musicPlayer);
+            document.getElementById('naviGAYtionbar').appendChild(musicControl);
         }
     }
 }
@@ -56,8 +69,8 @@ function createAudio(name,path) {
     var sfx = document.createElement('audio');
     sfx.id = name;
     sfx.setAttribute("src", path);
-    if (document.getElementById('container')) {
-        document.getElementById('container').appendChild(sfx);
+    if (document.getElementById('naviGAYtionbar')) {
+        document.getElementById('naviGAYtionbar').appendChild(sfx);
     } else {
          console.log("Couldn't add sounds");
     }
@@ -66,10 +79,8 @@ function createAudio(name,path) {
 
 function initEffects() {
     if (CanPlayAudio) {
-        var quicklinks = document.getElementById('quicklinks');
-        var navigation = document.getElementById('navigation');
-        var footer = document.getElementById('footer');
-        var keyboard = document.getElementById('keyboard');
+        var navigation = document.getElementById('naviGAYtionbar');
+        var feeter = document.getElementById('feeter');
         var musicDir = music.content.substring(0, music.content.indexOf('/') + 1);
         if (musicDir == "../") {
             var musicDir = music.content.substring(0, music.content.indexOf('/') + 4);
@@ -81,25 +92,17 @@ function initEffects() {
             // 404 page fix
             var musicDir = music.content.substring(0, music.content.indexOf('/') + 4);
         }
-        if (quicklinks && musicDir) {
+        if (naviGAYtionbar && musicDir) {
             var sfx_select = createAudio("sfx_select",musicDir+"select.mp3");
-            var sfx_ok = createAudio("sfx_ok",musicDir+"ok.mp3");
-            var sfx_hover0 = createAudio("sfx_hover0",musicDir+"hover0.mp3");
-            var sfx_hover1 = createAudio("sfx_hover1",musicDir+"hover1.mp3");
-            var sfx_hover2 = createAudio("sfx_hover2",musicDir+"hover2.mp3");
-            var sfx_hover3 = createAudio("sfx_hover3",musicDir+"hover3.mp3");
-            var sfx_hover4 = createAudio("sfx_hover4",musicDir+"hover4.mp3");
-            const sfx_hovers = [sfx_hover0,sfx_hover1,sfx_hover2,sfx_hover3,sfx_hover4];
-            if (quicklinks) {
-                addSoundsToButtons(quicklinks.querySelector('tr'),sfx_hovers,false);
+            var sfx_back = createAudio("sfx_back",musicDir+"back.mp3");
+            var sfx_soundon = createAudio("sfx_soundon",musicDir+"soundon.mp3");
+            var sfx_hover = createAudio("sfx_hover",musicDir+"hover.mp3");
+            if (naviGAYtionbar) {
+                addSoundsToButtons(naviGAYtionbar,sfx_hover,false);
             }
-            if (navigation) {
-                addSoundsToButtons(navigation.querySelector('tr'),sfx_hovers,true);
-            }
-            if (footer) {
-                addSoundsToButtons(footer.querySelector('p'),sfx_hovers,false);
-            }
-            var table = document.createElement('td');
+            //if (feeter) {
+            //    addSoundsToButtons(feeter.querySelector('p'),sfx_hover,false);
+            //}
             var soundControl = document.createElement('img');
             soundControl.id = "soundControl";
             if (localStorage.getItem("soundEnabled") == "false") {
@@ -113,24 +116,38 @@ function initEffects() {
                 soundControl.alt = "Sound on"
             }
             try {
-                soundControl.onclick = function() {toggleSound(soundControl); playSoundEffect('sfx_select')};
+                soundControl.onclick = function() {toggleSound(soundControl);playSoundEffect('sfx_soundon');playSoundEffect('sfx_select')};
             } catch {
                 if(soundControl.addEventListener){
                     soundControl.addEventListener('click', function(){
                         toggleSound(soundControl);
-                        playSoundEffect('sfx_select');
+                        playSoundEffect('sfx_soundon');
                     });
                 } else if(soundControl.attachEvent){
                     soundControl.attachEvent('onclick', function(){
                         toggleSound(soundControl);
-                        playSoundEffect('sfx_select');
+                        playSoundEffect('sfx_soundon');
                     });
                 } else {
                     console.log("Couldn't set up music button properly");
                 }
             }
-            table.appendChild(soundControl);
-            document.getElementById('header').querySelector('tr').appendChild(table);
+            try {
+                soundControl.onmouseover = function() {playSoundEffect(sfx_hover);};
+            } catch {
+                if(soundControl.addEventListener){
+                    soundControl.addEventListener('mouseover', function(){
+                        playSoundEffect(sfx_hover);
+                    });
+                } else if(soundControl.attachEvent){
+                    soundControl.attachEvent('onmouseover', function(){
+                        playSoundEffect(sfx_hover);
+                    });
+                } else {
+                    console.log("Couldn't set up music hover sound effect");
+                }
+            }
+            document.getElementById('naviGAYtionbar').appendChild(soundControl);
         }
     }
 }
@@ -147,7 +164,7 @@ function addSoundsToButtons(parent,hovers,alt) {
         // Selection sounds. Fuck this code.
         try {
             if (alt) {
-                btn.onclick = function() {playSoundEffect(sfx_ok);};
+                btn.onclick = function() {playSoundEffect(sfx_back);};
             } else {
                 btn.onclick = function() {playSoundEffect(sfx_select);};
             }
@@ -155,7 +172,7 @@ function addSoundsToButtons(parent,hovers,alt) {
             if(btn.addEventListener){
                 btn.addEventListener('click', function(){
                     if (alt) {
-                        playSoundEffect(sfx_ok);
+                        playSoundEffect(sfx_back);
                     } else {
                         playSoundEffect(sfx_select);
                     }
@@ -163,7 +180,7 @@ function addSoundsToButtons(parent,hovers,alt) {
             } else if(btn.attachEvent){
                 btn.attachEvent('onclick', function(){
                     if (alt) {
-                        playSoundEffect(sfx_ok);
+                        playSoundEffect(sfx_back);
                     } else {
                         playSoundEffect(sfx_select);
                     }
@@ -174,15 +191,15 @@ function addSoundsToButtons(parent,hovers,alt) {
         }
         // Hover sounds. Fuck this code even more.
         try {
-            btn.onmouseover = function() {playSoundEffect(hovers[i]);};
+            btn.onmouseover = function() {playSoundEffect(sfx_hover);};
         } catch {
             if(btn.addEventListener){
                 btn.addEventListener('mouseover', function(){
-                    playSoundEffect(hovers[i]);
+                    playSoundEffect(sfx_hover);
                 });
             } else if(btn.attachEvent){
                 btn.attachEvent('onmouseover', function(){
-                    playSoundEffect(hovers[i]);
+                    playSoundEffect(sfx_hover);
                 });
             } else {
                 console.log("Couldn't set up hover sound effect");

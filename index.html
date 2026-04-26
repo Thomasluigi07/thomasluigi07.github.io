@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Thomas' Website</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pool.css">
     <bgsound src="midi/home.mid" loop="-1"></bgsound>
     <meta id="music" name="music" content="js/home.mp3"/>
     <script src="js/music.js"></script>
@@ -19,25 +19,31 @@
     <meta content="#2394de" data-react-helmet="true" name="theme-color">
   </head>
   <body>
-    <div id="container" class="container">
-      <div id="header" class="header">
-        <div id="title" class="title">
+    <div class="eated">
+      <div id="oldheader" class="oldheader">
+        <div id="oldtitle" class="oldtitle">
           <h1>Thomas' Website</h1>
         </div>
-        <table id="quicklinks" class="quicklinks">
+        <table id="oldquicklinks" class="oldquicklinks">
           <tbody>
             <tr>
               <td>
-                <a href="#">Home</a>
+                <a href="index.html">Home</a>
               </td>
               <td>
                 <a href="aboutme/index.html">About Me</a>
               </td>
               <td>
-                <a href="reviews/index.html">Reviews</a>
+                <a href="blog/index.html">Blog</a>
               </td>
               <td>
                 <a href="creations/index.html">Creations</a>
+              </td>
+              <td>
+                <a href="reviews/index.html">Reviews</a>
+              </td>
+              <td>
+                <a href="collection/index.html">Collection</a>
               </td>
               <td>
                 <a href="extras/index.html">Extras</a>
@@ -46,14 +52,54 @@
           </tbody>
         </table>
       </div>
-      <div id="main" class="main">
-        <br />
-        <img src="css/wlc_section.png" title="Welcome to my website!" alt="Welcome to my website!">
-        <p>Simply click on any of the links above to go anywhere!</p>
-        <img class="fit" alt="Klonoa" src="css/klonoa2.png ">
+      <div id="naviGAYtionbar" class="navg">
+        <table class="aytionbar">
+          <tr>
+            <td><a target="_top" href="index.html"><img src="img/navbar/home.png" title="Home" alt="Home" onmouseover="this.src='img/navbar/home_hvr.png';" onmouseout="this.src='img/navbar/home.png';"></a></td>
+            <td><table>
+              <tr>
+                <td><a target="_top" href="aboutme/index.html"><img src="img/navbar/aboutme.png" title="About Me" alt="About Me" onmouseover="this.src='img/navbar/aboutme_hvr.png';" onmouseout="this.src='img/navbar/aboutme.png';"></a></td>
+                <td><a target="_top" href="blog/index.html"><img src="img/navbar/blog.png" title="Blog" alt="Blog" onmouseover="this.src='img/navbar/blog_hvr.png';" onmouseout="this.src='img/navbar/blog.png';"></a></td>
+                <td><a target="_top" href="creations/index.html"><img src="img/navbar/creations.png" title="Creations" alt="Creations" onmouseover="this.src='img/navbar/creations_hvr.png';" onmouseout="this.src='img/navbar/creations.png';"></a></td>
+              </tr>
+              <tr>
+                <td><a target="_top" href="reviews/index.html"><img src="img/navbar/reviews.png" title="Reviews & Opinions" alt="Reviews" onmouseover="this.src='img/navbar/reviews_hvr.png';" onmouseout="this.src='img/navbar/reviews.png';"></a></td>
+                <td><a target="_top" href="collection/index.html"><img src="img/navbar/collection.png" title="Collection" alt="Collection" onmouseover="this.src='img/navbar/collection_hvr.png';" onmouseout="this.src='img/navbar/collection.png';"></a></td>
+                <td><a target="_top" href="extras/index.html"><img src="img/navbar/extras.png" title="Extras" alt="Extras" onmouseover="this.src='img/navbar/extras_hvr.png';" onmouseout="this.src='img/navbar/extras.png';"></a></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table>
       </div>
-      <div id="footer" class="footer">
-        <p><img alt="Powered by Mac OS X" src="css/poweredbymacosx.gif"> <a target="_blank" href="http://thomasluigi07.com"><img alt="thomasluigi07.com" src="css/thomasbadge.gif"></a> <a target="_blank" href="http://os.thomasluigi07.com"><img alt="The OS Simulation Project" src="css/osprojectbadge.gif"></a></p>
+      <div id="yotloop" class="main">
+        <img src="img/sections/wlc_section.png" title="Welcome to my website!" alt="Welcome to my website!">
+        <p>Simply click on any of the links above or below to go there!</p>
+        <p>Please note that this site is in the process of being redesigned. Some things may be VERY broken right now. Sound is disabled as well (except on older browsers with support for MIDI).</p>
+        <p>There's not much I can think of putting on the homepage. If you were expecting something else, I'm sorry.</p>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <p>What?</p>
+        <br/>
+        <p>You want something else that isn't text? Alright, fine. Have an image of Klonoa since you're so special.</p>
+        <a href="img/klonoa2.png"><img style="height: 100px;width: 600px;"alt="image" title="image" src="img/klonoa2.png"></a>
+        <p>That good enough for you?</p>
+        <br/>
+        <br/>
+        <br/>
+        <p>No..?</p>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <p>Then have a resizable AND editable textbox. If that doesn't satisfy you, I don't know what will.</p>
+        <textarea placeholder="woaw you ated all the text. what have you done :3" style="max-height: 9999px;">hello  im text box dont eat my text</textarea>
+      </div>
+      <div id="feeter" class="foot">
+        <iframe src="frame/foot.html">Your browser is not supported on this site.</iframe>
       </div>
     </div>
   </body>

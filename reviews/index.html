@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Thomas - Reviews & Opinions</title>
-    <link rel="stylesheet" href="../css/main.css">
+    <title>Reviews - Thomas' Website</title>
+    <link rel="stylesheet" href="../css/pool.css">
     <bgsound src="../midi/reviews.mid" loop="-1"></bgsound>
     <meta id="music" name="music" content="../js/reviews.mp3"/>
     <script src="../js/music.js"></script>
@@ -19,12 +19,12 @@
     <meta content="#2394de" data-react-helmet="true" name="theme-color">
   </head>
   <body>
-    <div id="container" class="container">
-      <div id="header" class="header">
-        <div id="title" class="title">
+    <div class="eated">
+      <div id="oldheader" class="oldheader">
+        <div id="oldtitle" class="oldtitle">
           <h1>Thomas' Website</h1>
         </div>
-        <table id="quicklinks" class="quicklinks">
+        <table id="oldquicklinks" class="oldquicklinks">
           <tbody>
             <tr>
               <td>
@@ -34,10 +34,16 @@
                 <a href="../aboutme/index.html">About Me</a>
               </td>
               <td>
-                <a href="#">Reviews</a>
+                <a href="../blog/index.html">Blog</a>
               </td>
               <td>
                 <a href="../creations/index.html">Creations</a>
+              </td>
+              <td>
+                <a href="../reviews/index.html">Reviews</a>
+              </td>
+              <td>
+                <a href="../collection/index.html">Collection</a>
               </td>
               <td>
                 <a href="../extras/index.html">Extras</a>
@@ -45,31 +51,28 @@
             </tr>
           </tbody>
         </table>
-        <table id="navigation" class="navigation">
-          <tbody>
-            <tr>
-              <td>
-                <a href="#">Reviews & Opinions</a>
-              </td>
-              <td>
-                <a href="screenshots/index.html">Screenshots</a>
-              </td>
-              <td>
-                <a href="videos/index.html">Videos</a>
-              </td>
-              <td>
-                <a href="boxart/index.html">Box Art</a>
-              </td>
-              <td>
-                <a href="collection.html">Collection</a>
-              </td>
-            </tr>
-          </tbody>
+      </div>
+      <div id="naviGAYtionbar" class="navg">
+        <table class="aytionbar">
+          <tr>
+            <td><a target="_top" href="../index.html"><img src="../img/navbar/home.png" title="Home" alt="Home" onmouseover="this.src='../img/navbar/home_hvr.png';" onmouseout="this.src='../img/navbar/home.png';"></a></td>
+            <td><table>
+              <tr>
+                <td><a target="_top" href="../aboutme/index.html"><img src="../img/navbar/aboutme.png" title="About Me" alt="About Me" onmouseover="this.src='../img/navbar/aboutme_hvr.png';" onmouseout="this.src='../img/navbar/aboutme.png';"></a></td>
+                <td><a target="_top" href="../blog/index.html"><img src="../img/navbar/blog.png" title="Blog" alt="Blog" onmouseover="this.src='../img/navbar/blog_hvr.png';" onmouseout="this.src='../img/navbar/blog.png';"></a></td>
+                <td><a target="_top" href="../creations/index.html"><img src="../img/navbar/creations.png" title="Creations" alt="Creations" onmouseover="this.src='../img/navbar/creations_hvr.png';" onmouseout="this.src='../img/navbar/creations.png';"></a></td>
+              </tr>
+              <tr>
+                <td><a target="_top" href="../reviews/index.html"><img src="../img/navbar/reviews.png" title="Reviews & Opinions" alt="Reviews" onmouseover="this.src='../img/navbar/reviews_hvr.png';" onmouseout="this.src='../img/navbar/reviews.png';"></a></td>
+                <td><a target="_top" href="../collection/index.html"><img src="../img/navbar/collection.png" title="Collection" alt="Collection" onmouseover="this.src='../img/navbar/collection_hvr.png';" onmouseout="this.src='../img/navbar/collection.png';"></a></td>
+                <td><a target="_top" href="../extras/index.html"><img src="../img/navbar/extras.png" title="Extras" alt="Extras" onmouseover="this.src='../img/navbar/extras_hvr.png';" onmouseout="this.src='../img/navbar/extras.png';"></a></td>
+              </tr>
+            </table></td>
+          </tr>
         </table>
       </div>
-      <div id="main" class="main">
-        <br />
-        <img src="../css/lrv_section.png" title="Latest Review" alt="Latest Review">
+      <div id="yotloop" class="main">
+        <img src="../img/sections/lrv_section.png" title="Latest Review" alt="Latest Review">
         <table class="reviews" cellspacing="0">
           <tbody>
             <tr class="review">
@@ -81,13 +84,13 @@
               <td class="right">
                 <p>Reviewed on 14/02/2026</p>
                 <img title="My rating: 1.5/5" alt="My rating: 1.5/5" src="stars/review_3.png">
-                <img src="boxart/unscanned.png">
+                <a href="boxart/full/unscanned.png"><img src="boxart/frontonly/unscanned.png"></a>
               </td>
             </tr>
           </tbody>
         </table>
         <br />
-        <img src="../css/orv_section.png" title="Older Reviews" alt="Older Reviews">
+        <img src="../img/sections/orv_section.png" title="Older Reviews" alt="Older Reviews">
         <table class="reviews" cellspacing="0">
             <tbody>
                 <tr class="review">
@@ -101,7 +104,7 @@
                   <td class="right">
                     <p>Reviewed on 12/09/2025</p>
                     <img title="My rating: 4.5/5" alt="My rating: 4.5/5" src="stars/review_9.png">
-                    <img src="boxart/unscanned.png">
+                    <a href="boxart/full/unscanned.png"><img src="boxart/frontonly/unscanned.png"></a>
                   </td>
                 </tr>
                 <tr class="review">
@@ -113,7 +116,7 @@
                   <td class="right">
                     <p>Reviewed on 26/08/2025</p>
                     <img title="My rating: 2/5" alt="My rating: 2/5" src="stars/review_4.png">
-                    <img src="boxart/unscanned.png">
+                    <a href="boxart/full/unscanned.png"><img src="boxart/frontonly/unscanned.png"></a>
                   </td>
                   </tr>
                 <tr class="review">
@@ -126,7 +129,7 @@
                   <td class="right">
                     <p>Reviewed on 27/06/2025</p>
                     <img title="My rating: 4/5" alt="My rating: 4/5" src="stars/review_8.png">
-                    <img src="boxart/old/fzeroxexp.png">
+                    <a href="boxart/old/fzeroxexp.png"><img src="boxart/old/fzeroxexp.png"></a>
                   </td>
                   </tr>
                  <tr class="review">
@@ -139,7 +142,7 @@
                     <td class="right">
                         <p>Reviewed on 27/06/2025</p>
                         <img title="My rating: 4.5/5" alt="My rating: 4.5/5" src="stars/review_9.png">
-                        <img src="boxart/old/mapolygon.png">
+                        <a href="boxart/old/mapolygon.png"><img src="boxart/old/mapolygon.png"></a>
                     </td>
                 </tr>
                 <tr class="review">
@@ -151,7 +154,13 @@
                     <td class="right">
                         <p>Reviewed on 09/04/2025</p>
                         <img title="My rating: 0.5/5" alt="My rating: 0.5/5" src="stars/review_1.png">
-                        <img src="boxart/unscanned.png">
+                        <a href="boxart/full/unscanned.png"><img src="boxart/frontonly/unscanned.png"></a>
+                        <a href="screenshots/full/bigrigsteam/title.png"><img src="screenshots/previews/bigrigsteam/title.png"></a>
+                        <a href="screenshots/full/bigrigsteam/screen1.png"><img src="screenshots/previews/bigrigsteam/screen1.png"></a>
+                        <a href="screenshots/full/bigrigsteam/screen2.png"><img src="screenshots/previews/bigrigsteam/screen2.png"></a>
+                        <a href="screenshots/full/bigrigsteam/screen3.png"><img src="screenshots/previews/bigrigsteam/screen3.png"></a>
+                        <a href="screenshots/full/bigrigsteam/screen4.png"><img src="screenshots/previews/bigrigsteam/screen4.png"></a>
+                        <a href="screenshots/full/bigrigsteam/screen5.png"><img src="screenshots/previews/bigrigsteam/screen5.png"></a>
                     </td>
                 </tr>
                 <tr class="review">
@@ -164,7 +173,7 @@
                     <td class="right">
                         <p>Reviewed on 22/02/2025</p>
                         <img title="My rating: 5/5" alt="My rating: 5/5" src="stars/review_10.png">
-                        <img src="boxart/old/matalent.png">
+                        <a href="boxart/old/matalent.png"><img src="boxart/old/matalent.png"></a>
                     </td>
                 </tr>
                 <tr class="review">
@@ -177,7 +186,7 @@
                     <td class="right">
                         <p>Reviewed on 22/02/2025</p>
                         <img title="My rating: 4/5" alt="My rating: 4/5" src="stars/review_8.png">
-                        <img src="boxart/old/mapaint.png">
+                        <a href="boxart/old/mapaint.png"><img src="boxart/old/mapaint.png"></a>
                     </td>
                 </tr>
                 <tr class="review">
@@ -189,7 +198,7 @@
                     <td class="right">
                         <p>Reviewed on 14/02/2024</p>
                         <img title="My rating: 5/5" alt="My rating: 5/5" src="stars/review_10.png">
-                        <img src="boxart/frontonly/klonoa2.png">
+                        <a href="boxart/full/klonoa2.png"><img src="boxart/frontonly/klonoa2.png"></a>
                     </td>
                 </tr>
                 <tr class="review">
@@ -201,7 +210,7 @@
                     <td class="right">
                         <p>Reviewed on 16/09/2023</p>
                         <img title="My rating: 4.5/5" alt="My rating: 4.5/5" src="stars/review_9.png">
-                        <img src="boxart/old/yokai3.png">
+                        <a href="boxart/old/yokai3.png"><img src="boxart/old/yokai3.png"></a>
                     </td>
                 </tr>
                 <tr class="review">
@@ -213,7 +222,7 @@
                     <td class="right">
                         <p>Reviewed on 24/07/2023</p>
                         <img title="My rating: 1.5/5" alt="My rating: 1.5/5" src="stars/review_3.png">
-                        <img src="boxart/old/legomovie3ds.jpg">
+                        <a href="boxart/old/legomovie3ds.jpg"><img src="boxart/old/legomovie3ds.jpg"></a>
                     </td>
                 </tr>
                 <tr class="review">
@@ -225,7 +234,7 @@
                     <td class="right">
                         <p>Reviewed on 24/07/2023</p>
                         <img title="My rating: 4/5" alt="My rating: 4/5" src="stars/review_8.png">
-                        <img src="boxart/frontonly/mariokartwii.png">
+                        <a href="boxart/old/mariokartwii.png"><img src="boxart/old/mariokartwii.png"></a>
                     </td>
                 </tr>
                 <tr class="review">
@@ -238,7 +247,7 @@
                     <td class="right">
                         <p>Reviewed on 24/07/2023</p>
                         <img title="My rating: 4/5" alt="My rating: 4/5" src="stars/review_8.png">
-                        <img src="boxart/old/puyopuyotetris.jpg">
+                        <a href="boxart/old/puyopuyotetris.jpg"><img src="boxart/old/puyopuyotetris.jpg"></a>
                     </td>
                 </tr>
                 <tr class="review">
@@ -251,7 +260,7 @@
                         <p>Reviewed on 24/07/2023</p>
                         <p>Updated on 17/09/2025</p>
                         <img title="My rating: 4.5/5" alt="My rating: 4.5/5" src="stars/review_9.png">
-                        <img src="boxart/old/soniccd.jpg">
+                        <a href="boxart/old/soniccd.jpg"><img src="boxart/old/soniccd.jpg"></a>
                     </td>
                 </tr>
                 <tr class="review">
@@ -270,7 +279,14 @@
                         <td class="right">
                         <p>Reviewed on 24/07/2023</p>
                         <img title="My rating: 3/5" alt="My rating: 3/5" src="stars/review_6.png">
-                        <img src="boxart/old/drrobotnik.png">
+                        <a href="boxart/old/drrobotnik.png"><img src="boxart/old/drrobotnik.png"></a>
+                        <a href="screenshots/full/drrobotnik/title.png"><img src="screenshots/previews/drrobotnik/title.png"></a>
+                        <a href="screenshots/full/drrobotnik/screen1.png"><img src="screenshots/previews/drrobotnik/screen1.png"></a>
+                        <a href="screenshots/full/drrobotnik/screen2.png"><img src="screenshots/previews/drrobotnik/screen2.png"></a>
+                        <a href="screenshots/full/drrobotnik/screen3.png"><img src="screenshots/previews/drrobotnik/screen3.png"></a>
+                        <a href="screenshots/full/drrobotnik/screen4.png"><img src="screenshots/previews/drrobotnik/screen4.png"></a>
+                        <a href="screenshots/full/drrobotnik/screen5.png"><img src="screenshots/previews/drrobotnik/screen5.png"></a>
+
                     </td>
                 </tr>
                 <tr class="review">
@@ -283,7 +299,7 @@
                         <p>Reviewed on 24/07/2023</p>
                         <p>Updated on 17/09/2025</p>
                         <img title="My rating: 3.5/5" alt="My rating: 3.5/5" src="stars/review_7.png">
-                        <img src="boxart/frontonly/walle.png">
+                        <a href="boxart/full/walle_out.png"><img src="boxart/frontonly/walle.png"></a>
                     </td>
                 </tr>
                 <tr class="review">
@@ -295,7 +311,7 @@
                     <td class="right">
                         <p>Reviewed on 24/07/2023</p>
                         <img title="My rating: 4/5" alt="My rating: 4/5" src="stars/review_8.png">
-                        <img src="boxart/frontonly/pikmin3.png">
+                        <a href="boxart/full/pikmin3.png"><img src="boxart/frontonly/pikmin3.png"></a>
                     </td>
                 </tr>
                 <tr class="review">
@@ -307,7 +323,7 @@
                     <td class="right">
                         <p>Reviewed on 24/07/2023</p>
                         <img title="My rating: 4.5/5" alt="My rating: 4.5/5" src="stars/review_9.png">
-                        <img src="boxart/old/perfectdark.jpg">
+                        <a href="boxart/old/perfectdark.jpg"><img src="boxart/old/perfectdark.jpg"></a>
                         <a download onclick="playSound('select')" style="color: cornflowerblue; text-decoration: underline;" href="videos/old/perfectdark.mp4">Download Gameplay Video</a>
                     </td>
                 </tr>
@@ -320,8 +336,14 @@
                     <td class="right">
                         <p>Reviewed on 24/07/2023</p>
                         <img title="My rating: 3.5/5" alt="My rating: 3.5/5" src="stars/review_7.png">
-                        <img src="boxart/frontonly/rayman.png">
+                        <a href="boxart/full/rayman.png"><img src="boxart/frontonly/rayman.png"></a>
                         <a download onclick="playSound('select')" style="color: cornflowerblue; text-decoration: underline;" href="videos/old/rayman.mp4">Download Gameplay Video</a>
+                        <a href="screenshots/full/rayman/title.png"><img src="screenshots/previews/rayman/title.png"></a>
+                        <a href="screenshots/full/rayman/screen1.png"><img src="screenshots/previews/rayman/screen1.png"></a>
+                        <a href="screenshots/full/rayman/screen2.png"><img src="screenshots/previews/rayman/screen2.png"></a>
+                        <a href="screenshots/full/rayman/screen3.png"><img src="screenshots/previews/rayman/screen3.png"></a>
+                        <a href="screenshots/full/rayman/screen4.png"><img src="screenshots/previews/rayman/screen4.png"></a>
+                        <a href="screenshots/full/rayman/screen5.png"><img src="screenshots/previews/rayman/screen5.png"></a>
                     </td>
                 </tr>
                 <tr class="review">
@@ -333,8 +355,14 @@
                     <td class="right">
                         <p>Reviewed on 24/07/2023</p>
                         <img title="My rating: 5/5" alt="My rating: 5/5" src="stars/review_10.png">
-                        <img src="boxart/old/klonoa.jpg">
+                        <a href="boxart/old/klonoa.jpg"><img src="boxart/old/klonoa.jpg"></a>
                         <a download onclick="playSound('select')" style="color: cornflowerblue; text-decoration: underline;" href="videos/gameplay/klonoa.mp4">Download Gameplay Video</a>
+                        <a href="screenshots/full/klonoa/title.png"><img src="screenshots/previews/klonoa/title.png"></a>
+                        <a href="screenshots/full/klonoa/screen1.png"><img src="screenshots/previews/klonoa/screen1.png"></a>
+                        <a href="screenshots/full/klonoa/screen2.png"><img src="screenshots/previews/klonoa/screen2.png"></a>
+                        <a href="screenshots/full/klonoa/screen3.png"><img src="screenshots/previews/klonoa/screen3.png"></a>
+                        <a href="screenshots/full/klonoa/screen4.png"><img src="screenshots/previews/klonoa/screen4.png"></a>
+                        <a href="screenshots/full/klonoa/screen5.png"><img src="screenshots/previews/klonoa/screen5.png"></a>
                     </td>
                 </tr>
                 <tr class="review">
@@ -347,7 +375,7 @@
                     <td class="right">
                         <p>Reviewed on ??/??/????</p>
                         <img title="My rating: ?/5" alt="My rating: ?/5" src="stars/review_0.png">
-                        <img src="boxart/old/doshin64dd.png">
+                        <a href="boxart/old/doshin64dd.png"><img src="boxart/old/doshin64dd.png"></a>
                     </td>
                 </tr>
                 <!--
@@ -360,6 +388,7 @@
                     <td class="right">
                         <p>Reviewed on ??/??/????</p>
                         <img title="My rating: ?/5" alt="My rating: ?/5" src="stars/review_0.png">
+                        <a href="boxart/placeholder.png"><img src="boxart/placeholder.png"></a>
                         <a download onclick="playSound('select')" style="color: cornflowerblue; text-decoration: underline;" href="videos/placeholder.mp4">Download Gameplay Video</a>
                     </td>
                 </tr>
@@ -367,7 +396,7 @@
             </tbody>
         </table>
         <br />
-        <h3>UI Design I Love</h3>
+        <img src="../img/sections/uid_section.png" title="UI Design I Love" alt="UI Design I Love">
         <br />
         <p>Congratulations!!! Since you have scrolled down far enough, you have unlocked my opinions on certain UIs!</p>
         <p>One thing I've been obsessed with for a long time is UI. For some reason I really like when games/operating systems have intricate looking UIs.</p>
@@ -430,8 +459,8 @@
         </table>
         <br />
       </div>
-      <div id="footer" class="footer">
-        <p><img alt="Powered by Mac OS X" src="../css/poweredbymacosx.gif"> <a target="_blank" href="http://thomasluigi07.com"><img alt="thomasluigi07.com" src="../css/thomasbadge.gif"></a> <a target="_blank" href="http://os.thomasluigi07.com"><img alt="The OS Simulation Project" src="../css/osprojectbadge.gif"></a></p>
+      <div id="feeter" class="foot">
+        <iframe src="../frame/foot.html">Your browser is not supported on this site.</iframe>
       </div>
     </div>
   </body>

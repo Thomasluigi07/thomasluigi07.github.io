@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Thomas - Creations</title>
-    <link rel="stylesheet" href="../css/main.css">
+    <title>Creations - Thomas' Website</title>
+    <link rel="stylesheet" href="../css/pool.css">
     <bgsound src="../midi/creations.mid" loop="-1"></bgsound>
     <meta id="music" name="music" content="../js/creations.mp3"/>
     <script src="../js/music.js"></script>
@@ -19,12 +19,12 @@
     <meta content="#2394de" data-react-helmet="true" name="theme-color">
   </head>
   <body>
-    <div id="container" class="container">
-      <div id="header" class="header">
-        <div id="title" class="title">
+    <div class="eated">
+      <div id="oldheader" class="oldheader">
+        <div id="oldtitle" class="oldtitle">
           <h1>Thomas' Website</h1>
         </div>
-        <table id="quicklinks" class="quicklinks">
+        <table id="oldquicklinks" class="oldquicklinks">
           <tbody>
             <tr>
               <td>
@@ -34,10 +34,16 @@
                 <a href="../aboutme/index.html">About Me</a>
               </td>
               <td>
+                <a href="../blog/index.html">Blog</a>
+              </td>
+              <td>
+                <a href="../creations/index.html">Creations</a>
+              </td>
+              <td>
                 <a href="../reviews/index.html">Reviews</a>
               </td>
               <td>
-                <a href="#">Creations</a>
+                <a href="../collection/index.html">Collection</a>
               </td>
               <td>
                 <a href="../extras/index.html">Extras</a>
@@ -46,31 +52,54 @@
           </tbody>
         </table>
       </div>
-      <div id="main" class="main">
-        <br />
-        <img src="../css/osi_section.png" title="The OS Simulation Project" alt="The OS Simulation Project">
-        <p>A project to simulate operating systems. Used to release Roblox games, but now switched over to the Unity engine.</p>
+      <div id="naviGAYtionbar" class="navg">
+        <table class="aytionbar">
+          <tr>
+            <td><a target="_top" href="../index.html"><img src="../img/navbar/home.png" title="Home" alt="Home" onmouseover="this.src='../img/navbar/home_hvr.png';" onmouseout="this.src='../img/navbar/home.png';"></a></td>
+            <td><table>
+              <tr>
+                <td><a target="_top" href="../aboutme/index.html"><img src="../img/navbar/aboutme.png" title="About Me" alt="About Me" onmouseover="this.src='../img/navbar/aboutme_hvr.png';" onmouseout="this.src='../img/navbar/aboutme.png';"></a></td>
+                <td><a target="_top" href="../blog/index.html"><img src="../img/navbar/blog.png" title="Blog" alt="Blog" onmouseover="this.src='../img/navbar/blog_hvr.png';" onmouseout="this.src='../img/navbar/blog.png';"></a></td>
+                <td><a target="_top" href="../creations/index.html"><img src="../img/navbar/creations.png" title="Creations" alt="Creations" onmouseover="this.src='../img/navbar/creations_hvr.png';" onmouseout="this.src='../img/navbar/creations.png';"></a></td>
+              </tr>
+              <tr>
+                <td><a target="_top" href="../reviews/index.html"><img src="../img/navbar/reviews.png" title="Reviews & Opinions" alt="Reviews" onmouseover="this.src='../img/navbar/reviews_hvr.png';" onmouseout="this.src='../img/navbar/reviews.png';"></a></td>
+                <td><a target="_top" href="../collection/index.html"><img src="../img/navbar/collection.png" title="Collection" alt="Collection" onmouseover="this.src='../img/navbar/collection_hvr.png';" onmouseout="this.src='../img/navbar/collection.png';"></a></td>
+                <td><a target="_top" href="../extras/index.html"><img src="../img/navbar/extras.png" title="Extras" alt="Extras" onmouseover="this.src='../img/navbar/extras_hvr.png';" onmouseout="this.src='../img/navbar/extras.png';"></a></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table>
+      </div>
+      <div id="yotloop" class="main">
+        <img src="../img/sections/osi_section.png" title="The OS Simulation Project" alt="The OS Simulation Project">
+        <p>A project to simulate operating systems, including Windows XP and iOS 6. Used to release Roblox games, but now switched over to the Unity engine.</p>
         <p><a href="http://os.thomasluigi07.com">Visit Website</a> | <a href="https://github.com/OSSimulation/ossimulation.github.io">Source Code</a></p>
         <br />
-        <img src="../css/ios_section.png" title="iOS 6 Sounds" alt="iOS 6 Sounds">
-        <p>A collection of iOS 6 sounds.</p>
+        <img src="../img/sections/lhl_section.png" title="Linux Hammer Launcher" alt="Linux Hammer Launcher">
+        <p>A program that makes the Valve Hammer Editor (for Source 1 games) way easier to set up and use on Linux, with a working texture browser, automated Hammer++ installation, and fixes for certain games.</p>
+        <p>Not currently available yet.</p>
+        <!--<p><a href="https://github.com/endercatcore/linuxhammerlauncher/releases">Download</a> | <a href="https://github.com/endercatcore/linuxhammerlauncher">Source Code</a></p>-->
+        <br />
+        <img src="../img/sections/ios_section.png" title="iOS 6 Sounds" alt="iOS 6 Sounds">
+        <p>A collection of iOS 6 sounds, extracted from the ipsw.</p>
         <p><a href="http://ios6.thomasluigi07.com">Visit Website</a> | <a href="https://github.com/thomasluigi07/iOS-6-Sounds">Source Code</a></p>
         <br />
-        <img src="../css/hl9_section.png" title="HALF-LIFE 9" alt="HALF-LIFE 9">
-        <p>A discontinued recreation of HALF-LIFE Deathmatch in the Godot engine.</p>
+        <img src="../img/sections/hl9_section.png" title="HALF-LIFE 9" alt="HALF-LIFE 9">
+        <p>A discontinued and unfinished recreation of HALF-LIFE Deathmatch in the Godot engine... with Gordons doing the Gangman Style.</p>
         <p><a href="http://hl9.thomasluigi07.com">Visit Website</a> | <a href="http://github.com/thomasluigi07/hl9">Source Code</a></p>
         <br />
-        <img src="../css/iwa_section.png" title="iPhone Web App" alt="iPhone Web App">
+        <img src="../img/sections/iwa_section.png" title="iPhone Web App" alt="iPhone Web App">
         <p>A test web application for iOS.</p>
         <p><a href="http://iwa.thomasluigi07.com">Visit Website</a> | <a href="http://github.com/thomasluigi07/iPhoneWebApp">Source Code</a></p>
         <br />
-        <img src="../css/rbx_section.png" title="ROBLOX Places" alt="ROBLOX Places">
-        <p>These places are discontinued and will no longer be updated, as I don't want to play ROBLOX anymore.</p>
+        <img src="../img/sections/rbx_section.png" title="ROBLOX Places" alt="ROBLOX Places">
+        <p>My ROBLOX places that I'm somewhat proud of. These places are discontinued and will no longer be updated, as I don't want to play ROBLOX anymore. If things are broken, too bad!</p>
         <table>
           <tbody>
             <tr>
               <td>
-                <img class="render" src="../css/render.png" title="Render of Thomasluigi07 copying Klonoa's pose from Klonoa 2" alt="Render of Thomasluigi07 copying Klonoa's pose from Klonoa 2">
+                <a href="../img/render.png"><img class="render" src="../img/render.png" title="Render of Thomasluigi07 copying Klonoa's pose from Klonoa 2" alt="Render of Thomasluigi07 copying Klonoa's pose from Klonoa 2"></a>
               </td>
               <td>
                 <table class="bordered">
@@ -79,6 +108,11 @@
                       <th>Place</th>
                       <th>Direct Link</th>
                       <th>Quick Launch</th>
+                    </tr>
+                    <tr>
+                      <td>BLOXRETRO</td>
+                      <td><a href="https://www.roblox.com/games/5926666188">Place Page</a></td>
+                      <td><a href="https://www.roblox.com/games/start?placeid=5926666188">Play</a></td>
                     </tr>
                     <tr>
                       <td>Walter Videogame</td>
@@ -90,11 +124,6 @@
                       <td><a href="https://www.roblox.com/games/12077899262">Place Page</a></td>
                       <td><a href="https://www.roblox.com/games/start?placeid=12077899262">Play</a></td>
                     </tr>
-                    <tr>
-                      <td>Gordon Freeman Online</td>
-                      <td><a href="https://www.roblox.com/games/11592119766">Place Page</a></td>
-                      <td><a href="https://www.roblox.com/games/start?placeid=11592119766">Play</a></td>
-                    </tr>
                   </tbody>
                 </table>
               </td>
@@ -102,11 +131,11 @@
           </tbody>
         </table>
         <br />
-        <p>How about <a href="unknown.html">something else</a>..?</p>
-        <br/>
+        <img src="../img/sections/t2d_section.png" title="SUPER THOMAS 64 2" alt="SUPER THOMAS 64 2">
+        <p>A sequel to my first ever (and unreleased) romhack. PAL only and requires the 64DD after a certain point. This hack is too unfinished to show here... and I've been working on this since 2024. Oh no.</p>
       </div>
-      <div id="footer" class="footer">
-        <p><img alt="Powered by Mac OS X" src="../css/poweredbymacosx.gif"> <a target="_blank" href="http://thomasluigi07.com"><img alt="thomasluigi07.com" src="../css/thomasbadge.gif"></a> <a target="_blank" href="http://os.thomasluigi07.com"><img alt="The OS Simulation Project" src="../css/osprojectbadge.gif"></a></p>
+      <div id="feeter" class="foot">
+        <iframe src="../frame/foot.html"><a href="../html4/index.htm">Please use this page instead</a></iframe>
       </div>
     </div>
   </body>
