@@ -94,7 +94,7 @@ function initEffects() {
         }
         if (naviGAYtionbar && musicDir) {
             var sfx_select = createAudio("sfx_select",musicDir+"select.mp3");
-            var sfx_back = createAudio("sfx_back",musicDir+"back.mp3");
+            var sfx_back = createAudio("sfx_leavesite",musicDir+"leavesite.mp3");
             var sfx_soundon = createAudio("sfx_soundon",musicDir+"soundon.mp3");
             var sfx_hover = createAudio("sfx_hover",musicDir+"hover.mp3");
             if (naviGAYtionbar) {
